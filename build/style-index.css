@@ -1,0 +1,1582 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./css/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap);
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./css/style.scss (1) ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Goldman&display=swap);
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./css/style.scss (2) ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/* Override Wordpress official styles for login page */
+.login h1 a {
+  background-image: none;
+  text-indent: 0%;
+  font-size: 3rem;
+  width: 100%;
+}
+
+html {
+  min-width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Lato", sans-serif;
+  color: #282828;
+}
+html.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+html body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: rgb(241, 241, 241);
+  background: linear-gradient(90deg, rgb(241, 241, 241) 0%, rgb(255, 255, 255) 98%);
+  /* HEADER */
+  /* MAIN */
+  /* ABOUT US PAGE */
+  /* CLASSES & WORKOUTS PAGE */
+  /* CONTACT PAGE */
+  /* BLOG SINGLE POST */
+  /* Single Event Page */
+  /* RELATED WORKOUTS & CLASSES */
+  /* MY COMMENTS PAGE */
+}
+html body a {
+  text-decoration: none;
+  color: #000000;
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}
+html body a:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+html body header {
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5em;
+  padding: 0;
+  z-index: 10;
+  transition: top 0.2s ease-in;
+}
+html body header.hide {
+  top: -100px;
+}
+html body header .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: stretch;
+  /* Highlight current page link */
+}
+html body header .container .header-util {
+  position: fixed;
+  right: 0;
+  padding: 0.5em 0.5em;
+}
+html body header .container .header-util a,
+html body header .container .header-util span {
+  font-size: 0.5rem;
+  margin-right: 0.5em;
+  opacity: 1;
+}
+html body header .container .header-util a a:hover,
+html body header .container .header-util span a:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+html body header .container .current-menu-item a {
+  text-shadow: 1px #ff0000;
+  color: lightgray;
+}
+html body header .main-title {
+  background-image: url(images/gym-logo.80b37787.png);
+  background-size: cover;
+  background-position: center;
+  height: 3.5em;
+  width: 13em;
+  margin-left: -5em;
+  margin-right: 2em;
+  margin-top: 1em;
+}
+html body main {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10em;
+  /* HOMEPAGE WORKOUTS */
+  /* HOMEPAGE EVENTS */
+  /* HOMEPAGE SOCIAL MEDIA FEEDS */
+}
+html body main .heading-section {
+  background-image: url(images/image-front.67ef7a26.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}
+html body main .heading-section .heading {
+  text-align: start;
+  padding: 3em;
+  margin-top: 3em;
+  width: 60%;
+}
+html body main .heading-section .heading a {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+html body main .heading-section .heading a h1 {
+  font-size: 3rem;
+  color: rgb(250, 244, 244);
+}
+html body main .heading-section .heading a h2 {
+  color: rgb(250, 244, 244);
+  margin-top: -1em;
+  float: left;
+  font-style: italic;
+}
+html body main .heading-section .heading a:hover {
+  opacity: 0.7;
+}
+html body main .history-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+html body main .history-section h2 {
+  font-size: 2.5rem;
+}
+html body main .history-section .our-history {
+  text-align: center;
+  display: flex;
+  margin: 5em;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4em;
+}
+html body main .history-section .our-history img {
+  width: 40%;
+  height: 30%;
+  border-radius: 5px;
+}
+html body main .history-section .our-history p {
+  line-height: 1.8;
+  text-align: start;
+  margin: 0;
+  display: block;
+}
+html body main .homepage-classes {
+  text-align: center;
+  margin-top: 3em;
+}
+html body main .homepage-classes h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3em;
+}
+html body main .homepage-classes .classes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5em;
+  gap: 6em;
+}
+html body main .homepage-classes .classes-container .single-class h4 {
+  position: relative;
+  top: 40%;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 2.3rem;
+  font-weight: bolder;
+  padding: 0.5em;
+  color: white;
+}
+html body main .homepage-classes .classes-container .yoga {
+  background-image: url(images/yoga.5a5ba6e2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 25em;
+  width: 45%;
+  transition: opacity 0.2s ease-in;
+  opacity: 0.85;
+  border-radius: 5px;
+}
+html body main .homepage-classes .classes-container .yoga:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+html body main .homepage-classes .classes-container .zumba {
+  background-image: url(images/zumba.f6f6fedd.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 25em;
+  width: 45%;
+  transition: opacity 0.2s ease-in;
+  opacity: 0.85;
+  border-radius: 5px;
+}
+html body main .homepage-classes .classes-container .zumba:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+html body main .homepage-classes .classes-container .outdoor {
+  background-image: url(images/outdoor.6c35b28a.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 25em;
+  width: 45%;
+  transition: opacity 0.2s ease-in;
+  opacity: 0.85;
+  border-radius: 5px;
+}
+html body main .homepage-classes .classes-container .outdoor:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+html body main .homepage-classes .classes-container .cycling {
+  background-image: url(images/cycling.1addf8f6.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 25em;
+  width: 45%;
+  transition: opacity 0.2s ease-in;
+  opacity: 0.85;
+  border-radius: 5px;
+}
+html body main .homepage-classes .classes-container .cycling:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+html body main .homepage-workouts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+  margin-bottom: 10em;
+}
+html body main .homepage-workouts h2 {
+  font-size: 2.5rem;
+}
+html body main .homepage-workouts .workout-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(images/workout-homepage.d3976f48.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 70%;
+  height: 30em;
+  border-radius: 5px;
+}
+html body main .homepage-workouts .workout-heading a {
+  background-color: #778899;
+  border-radius: 5px;
+  padding: 1em;
+  opacity: 0.8;
+  width: 8em;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+  opacity: 0.7;
+  transition: all 0.2s ease-in;
+}
+html body main .homepage-workouts .workout-heading a:hover {
+  cursor: pointer;
+  background-color: #282828;
+  opacity: 0.75;
+}
+html body main .homepage-events .events-heading {
+  display: flex;
+  margin: 0 auto;
+  background-image: url(images/events.fb9ba90e.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 40em;
+  width: 100vw;
+}
+html body main .homepage-events .events-heading a {
+  position: relative;
+  top: 40%;
+  width: 10em;
+  height: 5%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1.2em;
+  padding-top: 1em;
+  font-size: 2rem;
+  font-weight: bolder;
+  background-color: #778899;
+  border-radius: 5px;
+  opacity: 0.8;
+  color: white;
+  transition: all 0.3s ease-in;
+}
+html body main .homepage-events .events-heading a:hover {
+  opacity: 0.75;
+  background-color: #282828;
+  cursor: pointer;
+}
+html body main .homepage-feeds {
+  margin-top: 5em;
+  padding: 2em;
+  margin-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+html body main .homepage-feeds h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+html body main .homepage-feeds .social-media-container {
+  margin-bottom: 4em;
+}
+html body main .homepage-feeds .social-media-container i {
+  margin: 0.5em;
+  font-size: 3rem;
+  transition: transform 0.2s linear;
+}
+html body main .homepage-feeds .social-media-container i:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+html body main .homepage-feeds .social-media-container .fa-facebook-official {
+  color: #00008b;
+}
+html body main .homepage-feeds .social-media-container .fa-instagram {
+  color: darkred;
+}
+html body main .homepage-feeds .social-media-container .fa-twitter {
+  color: lightblue;
+}
+html body main .homepage-feeds .social-media-container .fa-pinterest {
+  color: red;
+}
+html body main .homepage-feeds .feed-container {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-around;
+}
+html body main .homepage-feeds .feed-container img {
+  width: 25%;
+  height: 15%;
+  border-radius: 5px;
+}
+html body .blog-section h1 {
+  font-size: 3rem;
+}
+html body .page-container-about {
+  margin-top: 8em;
+}
+html body .page-container-about .page-banner h1 {
+  font-size: 3rem;
+}
+html body .page-container-about .metabox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 4em;
+}
+html body .page-container-about .metabox a {
+  text-decoration: underline;
+  font-weight: bold;
+  transition: opacity 0.2s ease-in;
+}
+html body .page-container-about .metabox a:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+html body .page-container-about .link-list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  text-align: center;
+  margin-top: -2em;
+}
+html body .page-container-about .link-list li {
+  margin: 0.2em;
+  list-style-type: none;
+  font-size: 1.2rem;
+  opacity: 1;
+}
+html body .page-container-about .link-list li a:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+html body .page-container-about .about-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3em;
+  margin-top: 4em;
+  margin-bottom: 10em;
+  padding: 4em;
+}
+html body .page-container-about .about-container .about-image {
+  width: 50%;
+  height: 30%;
+  border-radius: 5px;
+}
+html body .page-container-about .about-container p {
+  margin: 0;
+  line-height: 1.8;
+}
+html body .posts-container {
+  margin-bottom: 15em;
+}
+html body .posts-container .page-banner {
+  margin-top: 10em;
+}
+html body .posts-container .page-banner h1 {
+  font-size: 3rem;
+}
+html body .posts-container .page-container .single-event {
+  display: flex;
+  gap: 2em;
+}
+html body .posts-container .page-container .single-event .date-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: darkblue;
+  height: 6em;
+  width: 6em;
+  border-radius: 50%;
+  /* Center date inside circle */
+}
+html body .posts-container .page-container .single-event .date-container p {
+  color: whitesmoke;
+  font-size: 0.8rem;
+  padding: 0.5em;
+}
+html body .posts-container .workout-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 6em;
+  gap: 5em;
+}
+html body .posts-container .workout-container .single-workout {
+  position: relative;
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in;
+}
+html body .posts-container .workout-container .single-workout .workout-card-image {
+  width: 100%;
+  max-width: 30em;
+  height: auto;
+  border-radius: 5px;
+}
+html body .posts-container .workout-container .single-workout h3 {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  color: white;
+}
+html body .posts-container .workout-container .single-workout:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+html body .posts-container .classes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 6em;
+  gap: 10em;
+}
+html body .posts-container .classes-container .single-class-wrapper {
+  position: relative;
+  transition: opacity 0.2s ease-in;
+  opacity: 0.8;
+}
+html body .posts-container .classes-container .single-class-wrapper h3 {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  color: white;
+}
+html body .posts-container .classes-container .single-class-wrapper .yoga {
+  background-image: url(images/yoga.5a5ba6e2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 30em;
+  width: 25em;
+  border-radius: 5px;
+}
+html body .posts-container .classes-container .single-class-wrapper .zumba {
+  background-image: url(images/zumba.f6f6fedd.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 30em;
+  width: 25em;
+  border-radius: 5px;
+}
+html body .posts-container .classes-container .single-class-wrapper .outdoor {
+  background-image: url(images/outdoor.6c35b28a.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 30em;
+  width: 25em;
+  border-radius: 5px;
+}
+html body .posts-container .classes-container .single-class-wrapper .cycling {
+  background-image: url(images/cycling.1addf8f6.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 30em;
+  width: 25em;
+  border-radius: 5px;
+}
+html body .posts-container .classes-container .single-class-wrapper:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+html body .posts-container .page-banner {
+  width: 100vw;
+}
+html body .contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8em;
+  padding-bottom: 10em;
+  width: 100vw;
+  gap: 6em;
+  /* MAP */
+}
+html body .contact-wrapper .form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+html body .contact-wrapper .form-container h1 {
+  font-size: 3rem;
+  margin-bottom: 2em;
+}
+html body .contact-wrapper .form-container .form-message {
+  text-align: center;
+  margin-top: -2em;
+  font-weight: bold;
+  color: darkblue;
+}
+html body .contact-wrapper .form-container .contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+}
+html body .contact-wrapper .form-container .contact-form button {
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  height: 3.5em;
+  background-color: gainsboro;
+  color: #282828;
+  transition: background-color 0.2s ease-in;
+}
+html body .contact-wrapper .form-container .contact-form button:hover {
+  cursor: pointer;
+  background-color: #f0f8ff;
+}
+html body .contact-wrapper .form-container .contact-form button:active {
+  transform: translateY(-2px);
+}
+html body .contact-wrapper .form-container .contact-form input,
+html body .contact-wrapper .form-container .contact-form textarea {
+  font-family: "Lato", sans-serif;
+  border-top: none;
+  border-radius: 5px;
+  margin: 0.5em;
+  padding: 1em;
+}
+html body .contact-wrapper .map-title {
+  font-size: 3rem;
+  text-align: center;
+}
+html body .contact-wrapper .map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+html body .contact-wrapper .map-container .mapp-layout {
+  border: none;
+  margin: 0 auto;
+}
+html body .contact-wrapper .map-container .mapp-layout .mapp-wrapper .mapp-content {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+html body .page-container-single-post {
+  margin: 8em;
+}
+html body .page-container-single-post h2 {
+  text-align: center;
+}
+html body .page-container-single-post .metabox-blog-post p {
+  font-size: smaller;
+  margin-top: 2em;
+}
+html body .page-container-single-post .metabox-blog-post .blog-home {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}
+html body .page-container-single-post .metabox-blog-post .blog-home:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+html body .page-container {
+  margin: 6em;
+  margin-bottom: 20em;
+  /* Single Class & Workout Page */
+  /* Events Page */
+}
+html body .page-container .single-event {
+  display: flex;
+  gap: 2em;
+}
+html body .page-container .single-event .date-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: darkblue;
+  height: 6em;
+  width: 6em;
+  border-radius: 50%;
+  /* Center date inside circle */
+}
+html body .page-container .single-event .date-container p {
+  color: whitesmoke;
+  font-size: 0.8rem;
+  padding: 0.5em;
+}
+html body .page-container .single-event .event-info a {
+  transition: opacity 0.2s ease-in;
+  opacity: 1;
+}
+html body .page-container .single-event .event-info a:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+html body .page-container .single-post {
+  margin-bottom: 2em;
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+  justify-content: center;
+}
+html body .page-container .single-post .metabox p {
+  font-size: smaller;
+}
+html body .page-container .single-post .metabox p a {
+  text-decoration: underline;
+  background-color: transparent;
+  box-shadow: none;
+}
+html body .page-container .page-banner {
+  margin-top: 4em;
+}
+html body .page-container .page-banner h1 {
+  font-size: 3rem;
+}
+html body .page-container .generic-content-single-class,
+html body .page-container .generic-content-single-workout {
+  margin-top: 5em;
+  margin-bottom: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3em;
+}
+html body .page-container .generic-content-single-class img,
+html body .page-container .generic-content-single-workout img {
+  width: 60%;
+  max-width: 80em;
+  height: auto;
+  border-radius: 5px;
+}
+html body .page-container .generic-content-single-class p,
+html body .page-container .generic-content-single-workout p {
+  margin: 0;
+  line-height: 1.8;
+}
+html body .page-container .event-time {
+  text-align: center;
+  margin-top: -2em;
+}
+html body .page-container h2 {
+  text-align: center;
+}
+html body .page-container .past-events-link {
+  text-decoration: underline;
+}
+html body .page-container .metabox-blog-post p {
+  font-size: smaller;
+  margin-top: 2em;
+}
+html body .page-container .metabox-blog-post .blog-home {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}
+html body .page-container .metabox-blog-post .blog-home:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+html body .page-container .metabox {
+  margin: 0;
+}
+html body .page-container .metabox a {
+  text-decoration: underline;
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}
+html body .page-container .metabox a:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+html body .page-container .all-events-link {
+  margin: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}
+html body .page-container .all-events-link:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+html body .page-container .single-event {
+  margin-top: 3em;
+}
+html body .page-container .single-event .event-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+html body .page-container .single-event .event-info .generic-content-events {
+  display: flex;
+  flex-direction: column;
+}
+html body .page-container .single-event .event-info .generic-content-events .continue-reading-link {
+  font-size: 0.7rem;
+}
+html body .page-container .generic-content {
+  padding: 1em;
+}
+html body .page-container .generic-content p {
+  line-height: 1.5;
+}
+html body .page-container .generic-content a {
+  font-size: smaller;
+}
+html body .generic-content-single-event {
+  margin-top: 4em;
+  margin-left: 5em;
+  margin-bottom: 8em;
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  /* LIKE HEART */
+  /* SEARCH FORM WITH JS DISABLED */
+}
+html body .generic-content-single-event .like-box {
+  display: flex;
+  flex-direction: column;
+  min-width: 10%;
+  padding: 1em;
+  gap: 1.5em;
+}
+html body .generic-content-single-event .like-box div {
+  position: relative;
+}
+html body .generic-content-single-event .like-box div .fa-heart-o {
+  color: red;
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease-in;
+}
+html body .generic-content-single-event .like-box div .fa-heart-o:hover {
+  cursor: pointer;
+}
+html body .generic-content-single-event .like-box div .fa-heart {
+  position: absolute;
+  color: red;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+html body .generic-content-single-event .like-box div .fa-heart:hover {
+  cursor: pointer;
+}
+html body .generic-content-single-event .like-box span {
+  flex: 0 0 0.5em;
+  padding-left: 0.2em;
+}
+html body .generic-content-single-event [data-exist=yes] div .fa-heart {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+html body .generic-content-single-event [data-exist=yes] div .fa-heart-o {
+  color: transparent;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+html body .generic-content-single-event .search-form-container .search-form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: #778899;
+  width: 100%;
+  padding: 1em;
+  border: none;
+  border-radius: 4px;
+}
+html body .generic-content-single-event .search-form-container .search-form label {
+  font-size: 1.5rem;
+}
+html body .generic-content-single-event .search-form-container .search-form .search-form-inputs input {
+  padding: 0.8em;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  margin: 0.2em;
+}
+html body .generic-content-single-event .search-form-container .search-form .search-form-inputs .search-input-submit:hover {
+  cursor: pointer;
+  background-color: #f0f8ff;
+}
+html body hr {
+  margin: 3em;
+}
+html body .link-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0;
+  text-align: center;
+}
+html body .link-list li {
+  list-style-type: none;
+}
+html body .link-list li a .related-post-container {
+  position: relative;
+  width: 20em;
+  height: 15em;
+}
+html body .link-list li a .related-post-container img {
+  border-radius: 5px;
+  width: 80%;
+  max-width: 650px;
+  height: auto;
+}
+html body .link-list li a .related-post-container .text-overlay {
+  position: absolute;
+  text-align: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  bottom: 28%;
+  left: 10%;
+  background-color: #f0f8ff;
+  width: 80%;
+  height: 20%;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+  padding-left: 0;
+  padding-bottom: 0.2em;
+  text-align: center;
+}
+html body .link-list li a .related-post-container .text-overlay h3 {
+  font-size: 1rem;
+}
+html body .link-list li a:hover {
+  cursor: pointer;
+}
+html body .link-list li a:hover .text-overlay {
+  opacity: 1;
+}
+html body .create-comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: lightgray;
+  box-shadow: 1px 1px 1px lightgray;
+  border-radius: 5px;
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 4em;
+  margin-bottom: 6em;
+  padding: 1em;
+}
+html body .create-comment h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+html body .create-comment input,
+html body .create-comment textarea {
+  margin: 0.5em;
+  padding: 0.5em;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+  font-family: "Lato", sans-serif;
+}
+html body .create-comment .message {
+  font-size: 0.8rem;
+  color: black;
+}
+html body .create-comment .submit-comment-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+html body .create-comment .submit-comment-wrapper .submit-comment-btn {
+  background: gray;
+  color: whitesmoke;
+  font-weight: bold;
+  width: 5em;
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}
+html body .create-comment .submit-comment-wrapper .submit-comment-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+html body .create-comment .comment-limit-message {
+  visibility: hidden;
+  font-size: 0.8rem;
+  color: red;
+  margin-left: 1em;
+}
+html body .create-comment .comment-limit-message.visible {
+  visibility: visible;
+}
+html body #my-comments li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  list-style-type: none;
+  margin-bottom: 3em;
+  transition: all 0.4s ease-out;
+}
+html body #my-comments li.fade-out {
+  height: 0px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  opacity: 0.5;
+}
+html body #my-comments li.fade-in-calc {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+html body #my-comments li .comment-top {
+  display: flex;
+  gap: 1em;
+}
+html body #my-comments li .comment-top input {
+  border: none;
+  font-size: 2rem;
+  outline: none;
+  background-color: transparent;
+}
+html body #my-comments li .comment-top input.edit-mode {
+  outline: auto;
+}
+html body #my-comments li textarea {
+  width: 70%;
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: transparent;
+}
+html body #my-comments li textarea.edit-mode {
+  outline: auto;
+}
+html body #my-comments li button {
+  width: 2em;
+  height: 2em;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
+}
+html body #my-comments li button:hover {
+  cursor: pointer;
+  background-color: #f0f8ff;
+}
+html body #my-comments li .delete-btn,
+html body #my-comments li .fa-trash-o {
+  color: #ff0000;
+}
+html body #my-comments li .update-btn {
+  display: none;
+  background-color: darkblue;
+  color: #f0f8ff;
+  width: 5em;
+  height: 2em;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in;
+}
+html body #my-comments li .update-btn.--visible {
+  display: block;
+}
+html body #my-comments li .update-btn:hover {
+  cursor: pointer;
+  background-color: #778899;
+}
+html body #my-comments li .update-btn i {
+  color: #f0f8ff;
+  margin: 0.2em;
+}
+html .generic-content {
+  /* SEARCH FORM WITH JS DISABLED */
+}
+html .generic-content .search-form-container .search-form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: #778899;
+  width: 50%;
+  padding: 1em;
+  border: none;
+  border-radius: 4px;
+}
+html .generic-content .search-form-container .search-form label {
+  font-size: 1.5rem;
+}
+html .generic-content .search-form-container .search-form .search-form-inputs input {
+  padding: 0.8em;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  margin: 0.2em;
+}
+html .generic-content .search-form-container .search-form .search-form-inputs .search-input-submit:hover {
+  cursor: pointer;
+  background-color: #f0f8ff;
+}
+
+/* FOOTER */
+footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  width: 100%;
+  height: 3em;
+  padding: 1em;
+  background: #ffffff;
+}
+
+/* SEARCH OVERLAY */
+.search-overlay {
+  background: rgb(224, 224, 224);
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+  /* FADE IN - FADE OUT ANIMATION */
+}
+.search-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+.search-overlay .search-overlay-top {
+  background-color: lightgrey;
+  height: 5em;
+  position: relative;
+  z-index: 10;
+  top: -2;
+  width: 100%;
+}
+.search-overlay .search-overlay-top .search-container {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+}
+.search-overlay .search-overlay-top .search-container .search-input {
+  width: 75%;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #000000;
+  outline: none;
+  padding-left: 1.2em;
+}
+.search-overlay .search-overlay-top .search-container .search-input::-moz-placeholder {
+  font-size: 1.8rem;
+  color: #000000;
+}
+.search-overlay .search-overlay-top .search-container .search-input::placeholder {
+  font-size: 1.8rem;
+  color: #000000;
+}
+.search-overlay .search-overlay-top .search-container .fa-search {
+  margin-top: 0.5em;
+  margin-right: -2em;
+  font-size: 1.2rem;
+  color: #000000;
+}
+.search-overlay .search-overlay-top .search-container .fa-window-close {
+  font-size: 1.5rem;
+  color: #000000;
+  transition: opacity 0.1s ease-in;
+}
+.search-overlay .search-overlay-top .search-container .fa-window-close:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.search-overlay .results-container {
+  overflow-y: auto;
+  padding: 3em 5em;
+  margin-top: -2em;
+  height: 100%;
+  overflow-y: scroll;
+}
+.search-overlay .results-container .row {
+  display: flex;
+  justify-content: space-around;
+  gap: 2em;
+  margin-bottom: 20em;
+}
+.search-overlay .results-container .row .one-third {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  /* Style classes and workouts search list */
+}
+.search-overlay .results-container .row .one-third a {
+  text-decoration: underline;
+  font-size: 1rem;
+}
+.search-overlay .results-container .row .one-third h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+.search-overlay .results-container .row .one-third p {
+  text-align: center;
+}
+.search-overlay .results-container .row .one-third li {
+  list-style-type: none;
+  margin: 0.5em;
+}
+.search-overlay .results-container .row .one-third .search-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+.search-overlay .results-container .row .one-third .search-list li {
+  transition: transform 0.2s ease-in;
+}
+.search-overlay .results-container .row .one-third .search-list li .image-link {
+  text-decoration: none;
+  position: relative;
+  width: 20em;
+  height: 15em;
+}
+.search-overlay .results-container .row .one-third .search-list li .image-link img {
+  border-radius: 5px;
+  width: 80%;
+}
+.search-overlay .results-container .row .one-third .search-list li .image-link span {
+  position: absolute;
+  text-align: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  top: 0;
+  left: 0;
+  background-color: #f0f8ff;
+  width: 100%;
+  height: 2em;
+  padding-top: 0.5em;
+  opacity: 1;
+  transition: all 0.2s ease-in;
+}
+.search-overlay .results-container .row .one-third .search-list li:hover {
+  transform: scale(1.1);
+}
+
+/* LOADING SPINNER */
+@-webkit-keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spinner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 5em;
+}
+.spinner::before {
+  content: "";
+  box-sizing: border-box;
+  position: fixed;
+  width: 4em;
+  height: 4em;
+  border: solid 4px #00008b;
+  border-bottom-color: #f0f8ff;
+  border-radius: 50%;
+  -webkit-animation: spinner 0.6s linear infinite;
+          animation: spinner 0.6s linear infinite;
+}
+
+.blog-section {
+  margin-top: 7em;
+  text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media (hover: hover) {
+  a:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+/* MOBILE */
+@media screen and (min-width: 320px) {
+  html {
+    min-height: 100%;
+    min-width: 100%;
+    font-size: 45%;
+    overflow-x: hidden;
+  }
+  html header .container .hamburger {
+    width: 25px;
+    height: 30px;
+    position: fixed;
+    left: 0;
+    padding: 1em;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+  }
+  html header .container .hamburger.hide {
+    top: -100px;
+  }
+  html header .container .hamburger .bar {
+    background-color: #000000;
+    display: block;
+    border-radius: 2px;
+    width: 25px;
+    height: 5px;
+  }
+  html header .container .hamburger .bar-1 {
+    transform: translateY(-4px);
+  }
+  html header .container .hamburger .bar-3 {
+    transform: translateY(4px);
+  }
+  html header .container .hamburger.clicked .bar-1 {
+    transform: translateY(4px) rotate(-45deg);
+  }
+  html header .container .hamburger.clicked .bar-3 {
+    transform: translateY(-6px) rotate(45deg);
+  }
+  html header .container .hamburger.clicked .bar-2 {
+    opacity: 0;
+  }
+  html header .container #search-icon {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 0.2em 2.2em;
+    font-size: 3.5rem;
+    z-index: 10;
+  }
+  html header .container .main-navigation {
+    background: #ffffff;
+    width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 20;
+    transform: translatex(-100%);
+    opacity: 0;
+    transition: transform 250ms ease-in, opacity 250ms ease-in;
+  }
+  html header .container .main-navigation ul {
+    padding: 12em 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5em;
+  }
+  html header .container .main-navigation ul li {
+    list-style-type: none;
+    text-align: center;
+  }
+  html header .container .main-navigation.show {
+    transform: translatex(0);
+    opacity: 1;
+  }
+  html header .container .main-title {
+    left: 46%;
+    top: -5px;
+    position: fixed;
+  }
+  html main .homepage-feeds .feed-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+  }
+  html .posts-container {
+    /* Workouts Page */
+  }
+  html .posts-container .workout-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+  }
+  html .posts-container .workout-wrapper a {
+    width: 50%;
+    height: 50%;
+  }
+  html .page-container .generic-content .one-third {
+    width: 70em;
+    height: 40em;
+  }
+  html .page-container .link-list {
+    margin-top: 4em;
+    flex-direction: column;
+  }
+  html .page-container .link-list li a .related-post-container .text-overlay {
+    opacity: 1;
+  }
+  html .contact-wrapper .map-container {
+    width: 60%;
+  }
+  html .search-overlay .results-container .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  html .search-overlay .results-container .row .single-event {
+    display: flex;
+    gap: 1em;
+  }
+}
+/* PHONE LANDSCAPE */
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 55%;
+  }
+  html header .container .hamburger {
+    top: 0;
+  }
+  html header .container #search-icon {
+    padding: 0 2em;
+    font-size: 2.8rem;
+  }
+  /* TABLET */
+  /* DESKTOP & TABLET LANDSCAPE */
+  /* LARGE SCREENS */
+}
+@media screen and (min-width: 480px) and (min-width: 768px) and (orientation: portrait) {
+  html {
+    font-size: 75%;
+  }
+  html header .container .hamburger {
+    top: 0;
+  }
+  html header .container #search-icon {
+    padding: -0.5em 2.5em;
+    top: 8px;
+    font-size: 2.2rem;
+  }
+  html header .container .main-navigation ul {
+    gap: 8em;
+  }
+  html header .container .main-navigation ul li {
+    font-size: 1.2rem;
+  }
+  html header .container .main-title {
+    left: 47%;
+  }
+  html .contact-wrapper .mapp-layout {
+    border: none;
+  }
+  html .contact-wrapper .mapp-layout .mapp-content {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 480px) and (min-width: 992px) {
+  html {
+    font-size: 80%;
+  }
+  html header .container .hamburger {
+    visibility: hidden;
+    display: none;
+  }
+  html header .container .main-title {
+    position: relative;
+    left: 0;
+  }
+  html header .container #search-icon {
+    position: relative;
+    font-size: 1rem;
+    top: 26px;
+    left: -70px;
+    padding: 0;
+    transition: transform 0.2s ease-in;
+  }
+  html header .container #search-icon:hover {
+    transform: scale(1.1);
+  }
+  html header .container .main-navigation {
+    position: relative;
+    width: auto;
+    min-height: 4em;
+    top: 0;
+    left: -30px;
+    visibility: visible;
+    opacity: 1;
+    transform: initial;
+    background-color: transparent;
+  }
+  html header .container .main-navigation ul {
+    display: flex;
+    flex-direction: row;
+    padding: 1em 0;
+    gap: 4em;
+  }
+  html header .container .main-navigation ul li {
+    list-style-type: none;
+  }
+  html header .container .main-navigation ul li a {
+    font-size: 0.9rem;
+  }
+  html header .container .main-navigation ul li a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+  }
+  html main .homepage-feeds .feed-container {
+    flex-direction: row;
+  }
+  html .posts-container {
+    /* Workouts Page */
+  }
+  html .posts-container .workout-wrapper {
+    padding: 2em;
+    flex-direction: row;
+  }
+  html .page-container .link-list {
+    flex-direction: row;
+  }
+  html .page-container .link-list li a .related-post-container .text-overlay {
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+  }
+  html .page-container .link-list li a:hover .related-post-container .text-overlay {
+    opacity: 1;
+  }
+  html .search-overlay .results-container .row {
+    flex-direction: row;
+    align-items: initial;
+  }
+  html .search-overlay .results-container .row .single-event {
+    gap: 2em;
+  }
+}
+@media screen and (min-width: 480px) and (min-width: 1200px) {
+  html {
+    font-size: 100%;
+  }
+  html header .container #search-icon {
+    top: 32px;
+    left: -70px;
+  }
+  html header .container .main-navigation {
+    right: 30px;
+  }
+  html .posts-container .classes-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1920px) {
+  header .container #search-icon {
+    top: 32px;
+    margin-left: -4em;
+  }
+  header .container .main-navigation ul li {
+    margin-right: 4em;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/
