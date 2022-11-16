@@ -1,15 +1,15 @@
 class Navbar {
   constructor() {
     this.header = document.querySelector('.site-header');
-    this.events();
     this.hasScrolled;
     this.lastScrollTop = 0;
     this.navbarHeight = this.header.getBoundingClientRect().height;
+    this.events();
   }
 
   events() {
     window.addEventListener('scroll', () => {
-      // Hide navbar only on bigger screens
+      // Hide navbar on bigger screens
       if (window.innerWidth >= 992) {
         this.hasScrolled = true;
 

@@ -7,11 +7,15 @@
   // Register authorName field on JSON data
   function custom_rest() {
     register_rest_field('post', 'authorName', array(
-      'get_callback' => function() {return get_the_author();}
+      'get_callback' => function() {
+        return get_the_author();
+      }
     ));
 
     register_rest_field('comment', 'userCommentCount', array(
-      'get_callback' => function() {return count_user_posts(get_current_user_id(), 'comment');}
+      'get_callback' => function() {
+        return count_user_posts(get_current_user_id(), 'comment');
+      }
     ));
   }
 
@@ -76,11 +80,11 @@
 
   add_action('after_setup_theme', 'site_features');
 
-
   function my_deregister_scripts(){
     wp_deregister_script( 'wp-embed' );
   }
-  add_action( 'wp_footer', 'my_deregister_scripts' );
+
+  add_action('wp_footer', 'my_deregister_scripts' );
 
   function adjust_queries($query) {
 
@@ -110,7 +114,6 @@
   add_action('pre_get_posts', 'adjust_queries');
 
   // Redirect subscriber accounts out of admin and onto homepage
-  add_action('admin_init', 'redirectSubsToFrontend');
 
   function redirectSubsToFrontend() {
     $ourCurrentUser = wp_get_current_user();
@@ -120,7 +123,7 @@
     }
   }
 
-  add_action('wp_loaded', 'noAdminBar');
+  add_action('admin_init', 'redirectSubsToFrontend');
 
   function noAdminBar() {
     $ourCurrentUser = wp_get_current_user();
@@ -129,29 +132,31 @@
     }
   }
 
-  // Customize login screen
-  add_filter('login_headerurl', 'ourHeaderUrl');
+  add_action('wp_loaded', 'noAdminBar');
 
+  // Customize login screen
   function ourHeaderUrl() {
     return esc_url(site_url('/'));
   }
 
+  add_filter('login_headerurl', 'ourHeaderUrl');
+
   // Load CSS into WP login page
-  add_action('login_enqueue_scripts', 'ourLoginCSS');
 
   function ourLoginCSS() {
     wp_register_style('style', get_template_directory_uri() . '/css/style.css');
     wp_enqueue_style('style');
   }
 
-  add_filter('login_headertitle', 'ourLoginTitle');
+  add_action('login_enqueue_scripts', 'ourLoginCSS');
 
   function ourLoginTitle() {
     return get_bloginfo('name');
   }
 
+  add_filter('login_headertitle', 'ourLoginTitle');
+
   // Force comment posts to be private
-  add_filter('wp_insert_post_data', 'makeCommentPrivate', 10, 2);
 
   function makeCommentPrivate($data, $postarr) {
     
@@ -173,11 +178,15 @@
     return $data;
   }
 
+  add_filter('wp_insert_post_data', 'makeCommentPrivate', 10, 2);
+
+
   // Remove 'private' from post title
   function remove_private_prefix($title) {
     $title = str_replace('Private: ', '', $title);
     return $title;
   }
+
   add_filter('the_title', 'remove_private_prefix');
 
   // Remove empty p tags
@@ -185,6 +194,6 @@
     $content = force_balance_tags($content);
     return preg_replace('#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $content);
   }
-
+  
   add_filter('the_content', 'remove_empty_p', 20, 1);
 
