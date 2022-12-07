@@ -1,0 +1,72 @@
+.generic-content-single-event {
+  margin-top: 4em;
+  margin-left: 5em;
+  margin-bottom: 8em;
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+
+  /* LIKE HEART */
+  .like-box {
+    display: flex;
+    flex-direction: column;
+    min-width: 10%;
+    padding: 1em;
+    gap: 1.5em;
+
+    div {
+      position: relative;
+
+      .fa-heart-o {
+        color: red;
+        position: absolute;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.5s ease-in;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .fa-heart {
+        position: absolute;
+        color: red;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s ease-in;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    span {
+      flex: 0 0 0.5em;
+      padding-left: 0.2em;
+    }
+  }
+
+  [data-exist='yes'] {
+    div {
+      .fa-heart {
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.5s ease-in;
+      }
+
+      .fa-heart-o {
+        color: transparent;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s ease-in;
+      }
+    }
+  }
+
+  /* SEARCH FORM WITH JS DISABLED */
+  .search-form-container {
+    @include searchForm(100%);
+  }
+}

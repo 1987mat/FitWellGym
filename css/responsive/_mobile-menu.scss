@@ -1,0 +1,92 @@
+header {
+  .container {
+    .hamburger {
+      width: 2em;
+      height: 2em;
+      position: fixed;
+      left: 8px;
+      top: 12px;
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+
+      &.hide {
+        top: -100px;
+      }
+
+      .bar {
+        background-color: #000000;
+        display: block;
+        border-radius: 2px;
+        width: 25px;
+        height: 5px;
+      }
+
+      .bar-1 {
+        transform: translateY(-4px);
+      }
+
+      .bar-3 {
+        transform: translateY(4px);
+      }
+
+      &.clicked {
+        .bar-1 {
+          transform: translateY(4px) rotate(-45deg);
+        }
+
+        .bar-3 {
+          transform: translateY(-6px) rotate(45deg);
+        }
+
+        .bar-2 {
+          opacity: 0;
+        }
+      }
+    }
+
+    #search-icon {
+      position: fixed;
+      left: 45px;
+      top: 7px;
+      font-size: 3.5rem;
+      z-index: 10;
+    }
+
+    .main-navigation {
+      background: #ffffff;
+      width: 100vw;
+      min-height: 100vh;
+      position: fixed;
+      z-index: 20;
+      transform: translatex(-100%);
+      opacity: 0;
+      transition: transform 250ms ease-in, opacity 250ms ease-in;
+
+      ul {
+        padding: 8em 5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6em;
+
+        li {
+          font-size: 1.5rem;
+          list-style-type: none;
+          text-align: center;
+        }
+      }
+
+      &.show {
+        transform: translatex(0);
+        opacity: 1;
+      }
+    }
+
+    .main-title {
+      left: 46%;
+      top: -5px;
+      position: fixed;
+    }
+  }
+}

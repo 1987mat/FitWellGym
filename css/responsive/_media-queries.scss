@@ -1,0 +1,325 @@
+@media (hover: hover) {
+  a:hover {
+    @include linkHover();
+  }
+}
+
+/* MOBILE */
+@media screen and (min-width: 320px) {
+  html {
+    min-height: 100%;
+    min-width: 100%;
+    font-size: 45%;
+    overflow-x: hidden;
+
+    @import 'mobile-menu';
+
+    main {
+      .homepage-feeds {
+        .feed-container {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 3em;
+        }
+      }
+    }
+
+    .posts-container {
+      /* Workouts Page */
+      .workout-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+
+        a {
+          width: 50%;
+          height: 50%;
+        }
+      }
+    }
+
+    .page-container {
+      .generic-content {
+        .one-third {
+          width: 70em;
+          height: 40em;
+        }
+      }
+
+      .link-list {
+        margin-top: 4em;
+        flex-direction: column;
+
+        li {
+          a {
+            .related-post-container {
+              .text-overlay {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .contact-wrapper {
+      .map-wrapper {
+        flex-direction: column;
+
+        .map-container {
+          width: 60%;
+        }
+      }
+    }
+
+    .search-overlay {
+      .results-container {
+        .row {
+          flex-direction: column;
+          align-items: center;
+
+          .single-event {
+            display: flex;
+            gap: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 374px) {
+  html {
+    header {
+      .container {
+        .main-navigation {
+          ul {
+            padding-top: 8em;
+            gap: 7em;
+
+            li {
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  html {
+    font-size: 80%;
+
+    header {
+      .container {
+        .hamburger {
+          top: 15px;
+        }
+
+        #search-icon {
+          top: 9px;
+          left: 50px;
+          font-size: 2.2rem;
+        }
+
+        .main-navigation {
+          ul {
+            gap: 8em;
+          }
+        }
+
+        .main-title {
+          left: 47%;
+        }
+      }
+    }
+
+    .contact-wrapper {
+      .mapp-layout {
+        border: none;
+
+        .mapp-content {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* DESKTOP & TABLET LANDSCAPE */
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 80%;
+
+    header {
+      .container {
+        .hamburger {
+          visibility: hidden;
+          display: none;
+        }
+
+        .main-title {
+          position: relative;
+          left: 0;
+        }
+
+        #search-icon {
+          position: relative;
+          font-size: 1rem;
+          top: 26px;
+          left: -70px;
+          padding: 0 0.5em;
+          transition: transform 0.2s ease-in;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        .main-navigation {
+          position: relative;
+          width: auto;
+          min-height: 4em;
+          top: 0;
+          left: -30px;
+          visibility: visible;
+          opacity: 1;
+          transform: initial;
+          background-color: transparent;
+
+          ul {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            gap: 4em;
+
+            li {
+              list-style-type: none;
+
+              a {
+                font-size: 0.9rem;
+
+                &:hover {
+                  cursor: pointer;
+                  text-decoration: underline;
+                  text-underline-offset: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    main {
+      .homepage-feeds {
+        .feed-container {
+          flex-direction: row;
+        }
+      }
+    }
+
+    .posts-container {
+      /* Workouts Page */
+      .workout-wrapper {
+        padding: 2em;
+        flex-direction: row;
+      }
+    }
+
+    .page-container {
+      .link-list {
+        flex-direction: row;
+
+        li {
+          a {
+            .related-post-container {
+              .text-overlay {
+                opacity: 0;
+                transition: opacity 0.2s ease-in;
+              }
+            }
+            &:hover {
+              .related-post-container {
+                .text-overlay {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .contact-wrapper {
+      .map-wrapper {
+        flex-direction: row;
+      }
+    }
+
+    .search-overlay {
+      .results-container {
+        .row {
+          flex-direction: row;
+          align-items: initial;
+
+          .single-event {
+            gap: 2em;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* LARGE SCREENS */
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 100%;
+
+    header {
+      .container {
+        #search-icon {
+          top: 32px;
+          left: -70px;
+        }
+
+        .main-navigation {
+          right: 30px;
+        }
+      }
+    }
+
+    .posts-container {
+      .classes-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  header {
+    .container {
+      #search-icon {
+        top: 32px;
+        margin-left: -4em;
+      }
+
+      .main-navigation {
+        ul {
+          li {
+            margin-right: 4em;
+          }
+        }
+      }
+    }
+  }
+}

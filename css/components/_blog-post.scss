@@ -1,0 +1,26 @@
+.page-container-single-post {
+  margin: 8em;
+
+  h2 {
+    text-align: center;
+  }
+
+  .metabox-blog-post {
+    p {
+      font-size: smaller;
+      margin-top: 2em;
+    }
+
+    .blog-home {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      opacity: 1;
+      transition: opacity 0.2s ease-in;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+      }
+    }
+  }
+}

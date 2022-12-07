@@ -1,0 +1,34 @@
+.homepage-events {
+  .events-heading {
+    display: flex;
+    margin: 0 auto;
+    background-image: url('../images/events.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 40em;
+    width: 100vw;
+
+    a {
+      position: relative;
+      top: 40%;
+      width: 10em;
+      height: 4em;
+      text-align: center;
+      margin: 0 auto;
+      padding: 1.2em;
+      font-size: 2rem;
+      font-weight: bolder;
+      background-color: #778899;
+      border-radius: 2px;
+      opacity: 0.8;
+      color: white;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        opacity: 0.75;
+        background-color: #282828;
+        cursor: pointer;
+      }
+    }
+  }
+}

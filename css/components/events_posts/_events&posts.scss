@@ -1,0 +1,161 @@
+.page-container {
+  margin: 6em;
+  margin-bottom: 20em;
+  @include singleEventStyle();
+
+  .single-event {
+    .event-info {
+      a {
+        transition: opacity 0.2s ease-in;
+        opacity: 1;
+
+        &:hover {
+          @include linkHover();
+        }
+      }
+    }
+  }
+
+  .single-post {
+    margin-bottom: 2em;
+    display: flex;
+    padding: 1em;
+    flex-direction: column;
+    justify-content: center;
+
+    .metabox {
+      p {
+        font-size: smaller;
+        a {
+          text-decoration: underline;
+          background-color: transparent;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .page-banner {
+    margin-top: 4em;
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  /* Single Class & Workout Page */
+  .generic-content-single-class,
+  .generic-content-single-workout {
+    margin-top: 5em;
+    margin-bottom: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3em;
+
+    img {
+      width: 60%;
+      max-width: 80em;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.8;
+    }
+  }
+
+  /* Events Page */
+  .event-time {
+    text-align: center;
+    margin-top: -2em;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .past-events-link {
+    text-decoration: underline;
+  }
+
+  .metabox-blog-post {
+    p {
+      font-size: smaller;
+      margin-top: 2em;
+    }
+
+    .blog-home {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      opacity: 1;
+      transition: opacity 0.2s ease-in;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .metabox {
+    margin: 0;
+
+    a {
+      text-decoration: underline;
+      opacity: 1;
+      transition: opacity 0.2s ease-in;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .all-events-link {
+    margin: 0;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+
+  .single-event {
+    margin-top: 3em;
+
+    .event-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .generic-content-events {
+        display: flex;
+        flex-direction: column;
+
+        .continue-reading-link {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+
+  .generic-content {
+    padding: 1em;
+
+    p {
+      line-height: 1.5;
+    }
+
+    a {
+      font-size: smaller;
+    }
+  }
+}

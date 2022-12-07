@@ -1,0 +1,101 @@
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8em;
+  padding-bottom: 10em;
+  width: 100vw;
+  gap: 6em;
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 2em;
+    }
+
+    .form-message {
+      text-align: center;
+      margin-top: -2em;
+      font-weight: bold;
+      color: darkblue;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 70%;
+
+      button {
+        margin: 0.5em;
+        padding: 1em;
+        border-radius: 5px;
+        border: none;
+        font-weight: bold;
+        height: 3.5em;
+        background-color: gainsboro;
+        color: #282828;
+        transition: background-color 0.2s ease-in;
+
+        &:hover {
+          @include buttonHover();
+        }
+
+        &:active {
+          transform: translateY(-2px);
+        }
+      }
+
+      input,
+      textarea {
+        font-family: 'Lato', sans-serif;
+        border-top: none;
+        border-radius: 5px;
+        margin: 0.5em;
+        padding: 1em;
+      }
+    }
+  }
+
+  /* MAP */
+  .title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .map-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    width: 40em;
+
+    .map-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      width: 60%;
+
+      .mapp-layout {
+        border: none;
+        margin: 0 auto;
+
+        .mapp-wrapper {
+          .mapp-content {
+            padding-left: 2em;
+            padding-right: 2em;
+          }
+        }
+      }
+    }
+  }
+}

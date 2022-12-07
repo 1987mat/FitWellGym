@@ -1,6 +1,6 @@
 # Fit&Well Gym
 
-<p>Gym Wordpress site developed with HTML, SCSS, JS and PHP.</p>
+<p>Gym Wordpress website. Custom theme developed with HTML, SCSS, JS, PHP and WP REST API.</p>
 
 ## Links
 

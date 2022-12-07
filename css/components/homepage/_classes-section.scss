@@ -1,0 +1,92 @@
+.homepage-classes {
+  text-align: center;
+  margin-top: 3em;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3em;
+  }
+
+  .classes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5em;
+    gap: 6em;
+
+    .single-class h4 {
+      position: relative;
+      top: 40%;
+      width: 50%;
+      margin: 0 auto;
+      font-size: 2.3rem;
+      font-weight: bolder;
+      padding: 0.5em;
+      color: white;
+    }
+
+    .yoga {
+      background-image: url('../images/yoga.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 25em;
+      width: 45%;
+      transition: opacity 0.2s ease-in;
+      opacity: 0.85;
+      border-radius: 5px;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.75;
+      }
+    }
+
+    .zumba {
+      background-image: url('../images/zumba.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 25em;
+      width: 45%;
+      transition: opacity 0.2s ease-in;
+      opacity: 0.85;
+      border-radius: 5px;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.75;
+      }
+    }
+
+    .outdoor {
+      background-image: url('../images/outdoor.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 25em;
+      width: 45%;
+      transition: opacity 0.2s ease-in;
+      opacity: 0.85;
+      border-radius: 5px;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.75;
+      }
+    }
+
+    .cycling {
+      background-image: url('../images/cycling.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 25em;
+      width: 45%;
+      transition: opacity 0.2s ease-in;
+      opacity: 0.85;
+      border-radius: 5px;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.75;
+      }
+    }
+  }
+}

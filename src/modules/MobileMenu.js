@@ -22,11 +22,9 @@ class MobileMenu {
       !e.target.closest('.main-navigation') &&
       this.mobileNav.classList.contains('show')
     ) {
-      console.log('close');
       this.mobileNav.classList.toggle('show');
       this.hamburgerMenu.classList.toggle('clicked');
       document.documentElement.classList.toggle('no-scroll');
-      console.log('test');
     }
   }
 }

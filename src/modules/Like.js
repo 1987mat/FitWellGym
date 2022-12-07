@@ -39,6 +39,7 @@ class Like {
         const data = await response.json();
 
         currentLikeBox.dataset.exist = 'yes';
+
         // Get number value of like
         let likeCount = parseInt(
           currentLikeBox.querySelector('.like-count').innerHTML
