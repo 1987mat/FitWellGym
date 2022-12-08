@@ -1,6 +1,15 @@
 # Fit&Well Gym
 
-<p>Gym Wordpress website. Custom theme developed with HTML, SCSS, JS, PHP and WP REST API.</p>
+<p>Fully responsive gym Wordpress website. Custom theme developed with HTML, SCSS, Javascript and PHP.</p>
+<p>
+- Custom Post Types
+
+- Advanced Custom Fields (Pods Plug-in)
+
+- Search funcionality with Fetch | WP REST API
+
+- CRUD actions (Create,edit and delete comments)
+</p>
 
 ## Links
 
@@ -15,10 +24,11 @@
 ## Built With
 
 - HTML
-- CSS
+- SCSS
 - JavaScript
-- Webpack
 - PHP
+- Webpack
+- WP REST API
 
 ## Author
 
