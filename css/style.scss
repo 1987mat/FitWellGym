@@ -16,6 +16,7 @@
 
 * {
   box-sizing: border-box;
+  color: #282828;
 }
 
 html {
@@ -25,7 +26,6 @@ html {
   padding: 0;
   scroll-behavior: smooth;
   font-family: 'Lato', sans-serif;
-  color: #282828;
 
   &.no-scroll {
     overflow: hidden;

@@ -3,10 +3,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2em;
+  margin-top: 3em;
 
   h2 {
     font-size: 2.5rem;
+    transform: translateY(100px);
+    transition: transform 0.9s ease;
+
+    &.active {
+      transform: translateY(0);
+    }
   }
 
   .our-history {
@@ -16,18 +22,36 @@
     justify-content: center;
     align-items: flex-start;
     gap: 4em;
+    transform: translateY(100px);
+    transition: transform 0.9s ease;
 
     img {
-      width: 40%;
-      height: 30%;
+      width: 30em;
       border-radius: 5px;
     }
 
-    p {
-      line-height: 1.8;
-      text-align: start;
-      margin: 0;
-      display: block;
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3em;
+
+      p {
+        line-height: 2.5;
+        text-align: center;
+        font-size: 1.5rem;
+
+        a {
+          text-decoration: underline;
+          text-underline-offset: 2px;
+          color: #282828;
+        }
+      }
+    }
+
+    &.active {
+      transform: translateY(0);
     }
   }
 }

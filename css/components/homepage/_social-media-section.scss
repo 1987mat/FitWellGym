@@ -10,10 +10,18 @@
   h2 {
     font-size: 2.5rem;
     text-align: center;
+    transform: translateY(100px);
+    transition: transform 0.9s ease;
+
+    &.active {
+      transform: translateY(0);
+    }
   }
 
   .social-media-container {
     margin-bottom: 4em;
+    transform: translateY(100px);
+    transition: transform 0.9s ease;
 
     i {
       margin: 0.5em;
@@ -41,17 +49,27 @@
     .fa-pinterest {
       color: red;
     }
+
+    &.active {
+      transform: translateY(0);
+    }
   }
 
   .feed-container {
     margin-top: 2em;
     display: flex;
     justify-content: space-around;
+    transform: translateY(100px);
+    transition: transform 0.9s ease;
 
     img {
       width: 22em;
       height: 28em;
       border-radius: 5px;
+    }
+
+    &.active {
+      transform: translateY(0);
     }
   }
 }

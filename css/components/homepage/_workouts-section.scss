@@ -4,10 +4,17 @@
   justify-content: center;
   align-items: center;
   gap: 5em;
+  margin-top: 3em;
   margin-bottom: 10em;
 
   h2 {
     font-size: 2.5rem;
+    transform: translateY(100px);
+    transition: transform 0.9s ease;
+
+    &.active {
+      transform: translateY(0);
+    }
   }
 
   .workout-heading {
@@ -20,10 +27,12 @@
     width: 70%;
     height: 30em;
     border-radius: 5px;
+    transform: translateY(100px);
+    transition: transform 0.9s ease;
 
     a {
       background-color: #778899;
-      border-radius: 2px;
+      border-radius: 5px;
       padding: 1em;
       opacity: 0.8;
       width: 8em;
@@ -39,6 +48,10 @@
         background-color: #282828;
         opacity: 0.75;
       }
+    }
+
+    &.active {
+      transform: translateY(0);
     }
   }
 }

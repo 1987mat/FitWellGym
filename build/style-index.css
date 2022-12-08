@@ -17,15 +17,18 @@
   width: 100%;
 }
 
+* {
+  box-sizing: border-box;
+  color: #282828;
+}
+
 html {
   min-width: 100%;
   min-height: 100%;
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   font-family: "Lato", sans-serif;
-  color: #282828;
 }
 html.no-scroll {
   overflow: hidden;
@@ -41,15 +44,6 @@ html body {
   overflow-x: hidden;
   background: rgb(241, 241, 241);
   background: linear-gradient(90deg, rgb(241, 241, 241) 0%, rgb(255, 255, 255) 98%);
-  /* HEADER */
-  /* MAIN */
-  /* ABOUT US PAGE */
-  /* CLASSES & WORKOUTS PAGE */
-  /* CONTACT PAGE */
-  /* BLOG SINGLE POST */
-  /* Single Event Page */
-  /* RELATED WORKOUTS & CLASSES */
-  /* MY COMMENTS PAGE */
 }
 html body a {
   text-decoration: none;
@@ -70,7 +64,8 @@ html body header {
   height: 5em;
   padding: 0;
   z-index: 10;
-  transition: top 0.2s ease-in;
+  transition: top 0.6s ease;
+  box-shadow: 0 6px 6px -6px gray;
 }
 html body header.hide {
   top: -100px;
@@ -101,6 +96,9 @@ html body header .container .header-util span a:hover {
 html body header .container .current-menu-item a {
   text-shadow: 1px #ff0000;
   color: lightgray;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 3px;
 }
 html body header .main-title {
   background-image: url(images/gym-logo.80b37787.png);
@@ -116,12 +114,10 @@ html body main {
   display: flex;
   flex-direction: column;
   margin-bottom: 10em;
-  /* HOMEPAGE WORKOUTS */
-  /* HOMEPAGE EVENTS */
-  /* HOMEPAGE SOCIAL MEDIA FEEDS */
+  /* HOMEPAGE */
 }
 html body main .heading-section {
-  background-image: url(images/image-front.67ef7a26.jpg);
+  background-image: url(images/image-front.5fe9ae23.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -132,10 +128,9 @@ html body main .heading-section .heading {
   padding: 3em;
   margin-top: 3em;
   width: 60%;
-}
-html body main .heading-section .heading a {
   opacity: 1;
-  transition: opacity 0.3s ease-in;
+  transform: translateY(100px);
+  transition: transform 0.9s ease, opacity 0.5s ease;
 }
 html body main .heading-section .heading a h1 {
   font-size: 3rem;
@@ -147,18 +142,26 @@ html body main .heading-section .heading a h2 {
   float: left;
   font-style: italic;
 }
-html body main .heading-section .heading a:hover {
-  opacity: 0.7;
+html body main .heading-section .heading:hover {
+  opacity: 0.8;
+}
+html body main .heading-section .heading.active {
+  transform: translateY(0);
 }
 html body main .history-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2em;
+  margin-top: 3em;
 }
 html body main .history-section h2 {
   font-size: 2.5rem;
+  transform: translateY(100px);
+  transition: transform 0.9s ease;
+}
+html body main .history-section h2.active {
+  transform: translateY(0);
 }
 html body main .history-section .our-history {
   text-align: center;
@@ -167,17 +170,32 @@ html body main .history-section .our-history {
   justify-content: center;
   align-items: flex-start;
   gap: 4em;
+  transform: translateY(100px);
+  transition: transform 0.9s ease;
 }
 html body main .history-section .our-history img {
-  width: 40%;
-  height: 30%;
+  width: 30em;
   border-radius: 5px;
 }
-html body main .history-section .our-history p {
-  line-height: 1.8;
-  text-align: start;
-  margin: 0;
-  display: block;
+html body main .history-section .our-history .text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+html body main .history-section .our-history .text-content p {
+  line-height: 2.5;
+  text-align: center;
+  font-size: 1.5rem;
+}
+html body main .history-section .our-history .text-content p a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: #282828;
+}
+html body main .history-section .our-history.active {
+  transform: translateY(0);
 }
 html body main .homepage-classes {
   text-align: center;
@@ -186,6 +204,11 @@ html body main .homepage-classes {
 html body main .homepage-classes h2 {
   font-size: 2.5rem;
   margin-bottom: 3em;
+  transform: translateY(100px);
+  transition: transform 0.9s ease;
+}
+html body main .homepage-classes h2.active {
+  transform: translateY(0);
 }
 html body main .homepage-classes .classes-container {
   display: flex;
@@ -193,6 +216,8 @@ html body main .homepage-classes .classes-container {
   justify-content: center;
   margin: 5em;
   gap: 6em;
+  transform: translateY(100px);
+  transition: transform 0.9s ease;
 }
 html body main .homepage-classes .classes-container .single-class h4 {
   position: relative;
@@ -205,11 +230,11 @@ html body main .homepage-classes .classes-container .single-class h4 {
   color: white;
 }
 html body main .homepage-classes .classes-container .yoga {
-  background-image: url(images/yoga.5a5ba6e2.jpg);
+  background-image: url(images/yoga.d9a8d901.jpg);
   background-size: cover;
   background-position: center;
-  height: 25em;
-  width: 45%;
+  width: 30em;
+  height: 30em;
   transition: opacity 0.2s ease-in;
   opacity: 0.85;
   border-radius: 5px;
@@ -219,11 +244,11 @@ html body main .homepage-classes .classes-container .yoga:hover {
   opacity: 0.75;
 }
 html body main .homepage-classes .classes-container .zumba {
-  background-image: url(images/zumba.f6f6fedd.jpg);
+  background-image: url(images/zumba.632c6edd.jpg);
   background-size: cover;
   background-position: center;
-  height: 25em;
-  width: 45%;
+  width: 30em;
+  height: 30em;
   transition: opacity 0.2s ease-in;
   opacity: 0.85;
   border-radius: 5px;
@@ -233,11 +258,11 @@ html body main .homepage-classes .classes-container .zumba:hover {
   opacity: 0.75;
 }
 html body main .homepage-classes .classes-container .outdoor {
-  background-image: url(images/outdoor.6c35b28a.jpg);
+  background-image: url(images/outdoor.ce41cc37.jpg);
   background-size: cover;
   background-position: center;
-  height: 25em;
-  width: 45%;
+  width: 30em;
+  height: 30em;
   transition: opacity 0.2s ease-in;
   opacity: 0.85;
   border-radius: 5px;
@@ -247,11 +272,11 @@ html body main .homepage-classes .classes-container .outdoor:hover {
   opacity: 0.75;
 }
 html body main .homepage-classes .classes-container .cycling {
-  background-image: url(images/cycling.1addf8f6.jpg);
+  background-image: url(images/cycling.1b8b765e.jpg);
   background-size: cover;
   background-position: center;
-  height: 25em;
-  width: 45%;
+  width: 30em;
+  height: 30em;
   transition: opacity 0.2s ease-in;
   opacity: 0.85;
   border-radius: 5px;
@@ -260,27 +285,38 @@ html body main .homepage-classes .classes-container .cycling:hover {
   cursor: pointer;
   opacity: 0.75;
 }
+html body main .homepage-classes .classes-container.active {
+  transform: translateY(0);
+}
 html body main .homepage-workouts {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 5em;
+  margin-top: 3em;
   margin-bottom: 10em;
 }
 html body main .homepage-workouts h2 {
   font-size: 2.5rem;
+  transform: translateY(100px);
+  transition: transform 0.9s ease;
+}
+html body main .homepage-workouts h2.active {
+  transform: translateY(0);
 }
 html body main .homepage-workouts .workout-heading {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(images/workout-homepage.d3976f48.jpg);
+  background-image: url(images/workout-homepage.0293de86.jpg);
   background-size: cover;
   background-position: center;
   width: 70%;
   height: 30em;
   border-radius: 5px;
+  transform: translateY(100px);
+  transition: transform 0.9s ease;
 }
 html body main .homepage-workouts .workout-heading a {
   background-color: #778899;
@@ -300,24 +336,30 @@ html body main .homepage-workouts .workout-heading a:hover {
   background-color: #282828;
   opacity: 0.75;
 }
+html body main .homepage-workouts .workout-heading.active {
+  transform: translateY(0);
+}
 html body main .homepage-events .events-heading {
   display: flex;
   margin: 0 auto;
-  background-image: url(images/events.fb9ba90e.jpg);
+  background-image: url(images/events.d27db5da.jpg);
   background-size: cover;
   background-position: center;
   height: 40em;
   width: 100vw;
+  transform: translateY(100px);
+  transition: transform 0.9s ease;
 }
 html body main .homepage-events .events-heading a {
   position: relative;
   top: 40%;
   width: 10em;
-  height: 5%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   text-align: center;
   margin: 0 auto;
-  padding: 1.2em;
-  padding-top: 1em;
+  padding: 1em;
   font-size: 2rem;
   font-weight: bolder;
   background-color: #778899;
@@ -331,6 +373,9 @@ html body main .homepage-events .events-heading a:hover {
   background-color: #282828;
   cursor: pointer;
 }
+html body main .homepage-events .events-heading.active {
+  transform: translateY(0);
+}
 html body main .homepage-feeds {
   margin-top: 5em;
   padding: 2em;
@@ -343,9 +388,16 @@ html body main .homepage-feeds {
 html body main .homepage-feeds h2 {
   font-size: 2.5rem;
   text-align: center;
+  transform: translateY(100px);
+  transition: transform 0.9s ease;
+}
+html body main .homepage-feeds h2.active {
+  transform: translateY(0);
 }
 html body main .homepage-feeds .social-media-container {
   margin-bottom: 4em;
+  transform: translateY(100px);
+  transition: transform 0.9s ease;
 }
 html body main .homepage-feeds .social-media-container i {
   margin: 0.5em;
@@ -368,15 +420,23 @@ html body main .homepage-feeds .social-media-container .fa-twitter {
 html body main .homepage-feeds .social-media-container .fa-pinterest {
   color: red;
 }
+html body main .homepage-feeds .social-media-container.active {
+  transform: translateY(0);
+}
 html body main .homepage-feeds .feed-container {
   margin-top: 2em;
   display: flex;
   justify-content: space-around;
+  transform: translateY(100px);
+  transition: transform 0.9s ease;
 }
 html body main .homepage-feeds .feed-container img {
-  width: 25%;
-  height: 15%;
+  width: 22em;
+  height: 28em;
   border-radius: 5px;
+}
+html body main .homepage-feeds .feed-container.active {
+  transform: translateY(0);
 }
 html body .blog-section h1 {
   font-size: 3rem;
@@ -435,7 +495,10 @@ html body .page-container-about .about-container .about-image {
 }
 html body .page-container-about .about-container p {
   margin: 0;
-  line-height: 1.8;
+  padding: 0;
+  line-height: 2;
+  text-align: center;
+  font-size: 1.5rem;
 }
 html body .posts-container {
   margin-bottom: 15em;
@@ -521,7 +584,7 @@ html body .posts-container .classes-container .single-class-wrapper h3 {
   color: white;
 }
 html body .posts-container .classes-container .single-class-wrapper .yoga {
-  background-image: url(images/yoga.5a5ba6e2.jpg);
+  background-image: url(images/yoga.d9a8d901.jpg);
   background-size: cover;
   background-position: center;
   height: 30em;
@@ -529,7 +592,7 @@ html body .posts-container .classes-container .single-class-wrapper .yoga {
   border-radius: 5px;
 }
 html body .posts-container .classes-container .single-class-wrapper .zumba {
-  background-image: url(images/zumba.f6f6fedd.jpg);
+  background-image: url(images/zumba.632c6edd.jpg);
   background-size: cover;
   background-position: center;
   height: 30em;
@@ -537,7 +600,7 @@ html body .posts-container .classes-container .single-class-wrapper .zumba {
   border-radius: 5px;
 }
 html body .posts-container .classes-container .single-class-wrapper .outdoor {
-  background-image: url(images/outdoor.6c35b28a.jpg);
+  background-image: url(images/outdoor.ce41cc37.jpg);
   background-size: cover;
   background-position: center;
   height: 30em;
@@ -545,7 +608,7 @@ html body .posts-container .classes-container .single-class-wrapper .outdoor {
   border-radius: 5px;
 }
 html body .posts-container .classes-container .single-class-wrapper .cycling {
-  background-image: url(images/cycling.1addf8f6.jpg);
+  background-image: url(images/cycling.1b8b765e.jpg);
   background-size: cover;
   background-position: center;
   height: 30em;
@@ -619,22 +682,30 @@ html body .contact-wrapper .form-container .contact-form textarea {
   margin: 0.5em;
   padding: 1em;
 }
-html body .contact-wrapper .map-title {
+html body .contact-wrapper .title {
   font-size: 3rem;
   text-align: center;
 }
-html body .contact-wrapper .map-container {
+html body .contact-wrapper .map-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  width: 40em;
+}
+html body .contact-wrapper .map-wrapper .map-container {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   z-index: 1;
+  width: 60%;
 }
-html body .contact-wrapper .map-container .mapp-layout {
+html body .contact-wrapper .map-wrapper .map-container .mapp-layout {
   border: none;
   margin: 0 auto;
 }
-html body .contact-wrapper .map-container .mapp-layout .mapp-wrapper .mapp-content {
+html body .contact-wrapper .map-wrapper .map-container .mapp-layout .mapp-wrapper .mapp-content {
   padding-left: 2em;
   padding-right: 2em;
 }
@@ -1110,7 +1181,6 @@ html .generic-content .search-form-container .search-form .search-form-inputs .s
   background-color: #f0f8ff;
 }
 
-/* FOOTER */
 footer {
   margin-top: auto;
   display: flex;
@@ -1119,12 +1189,11 @@ footer {
   align-items: center;
   font-weight: bold;
   width: 100%;
-  height: 3em;
+  height: 4em;
   padding: 1em;
   background: #ffffff;
 }
 
-/* SEARCH OVERLAY */
 .search-overlay {
   background: rgb(224, 224, 224);
   box-sizing: border-box;
@@ -1137,7 +1206,7 @@ footer {
   height: 100%;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 250ms ease-in;
+  transition: opacity 0.3s ease;
   /* FADE IN - FADE OUT ANIMATION */
 }
 .search-overlay.show {
@@ -1198,6 +1267,35 @@ footer {
   margin-top: -2em;
   height: 100%;
   overflow-y: scroll;
+  /* LOADING SPINNER */
+}
+@-webkit-keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.search-overlay .results-container .spinner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 5em;
+}
+.search-overlay .results-container .spinner::before {
+  content: "";
+  box-sizing: border-box;
+  position: fixed;
+  width: 4em;
+  height: 4em;
+  border: solid 4px #00008b;
+  border-bottom-color: #f0f8ff;
+  border-radius: 50%;
+  -webkit-animation: spinner 0.6s linear infinite;
+          animation: spinner 0.6s linear infinite;
 }
 .search-overlay .results-container .row {
   display: flex;
@@ -1263,42 +1361,11 @@ footer {
   transform: scale(1.1);
 }
 
-/* LOADING SPINNER */
-@-webkit-keyframes spinner {
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes spinner {
-  to {
-    transform: rotate(360deg);
-  }
-}
-.spinner {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  padding-top: 5em;
-}
-.spinner::before {
-  content: "";
-  box-sizing: border-box;
-  position: fixed;
-  width: 4em;
-  height: 4em;
-  border: solid 4px #00008b;
-  border-bottom-color: #f0f8ff;
-  border-radius: 50%;
-  -webkit-animation: spinner 0.6s linear infinite;
-          animation: spinner 0.6s linear infinite;
-}
-
 .blog-section {
   margin-top: 7em;
   text-align: center;
 }
 
-/* MEDIA QUERIES */
 @media (hover: hover) {
   a:hover {
     cursor: pointer;
@@ -1311,14 +1378,13 @@ footer {
     min-height: 100%;
     min-width: 100%;
     font-size: 45%;
-    overflow-x: hidden;
   }
   html header .container .hamburger {
-    width: 25px;
-    height: 30px;
+    width: 2em;
+    height: 2em;
     position: fixed;
-    left: 0;
-    padding: 1em;
+    left: 8px;
+    top: 12px;
     z-index: 200;
     display: flex;
     flex-direction: column;
@@ -1350,9 +1416,8 @@ footer {
   }
   html header .container #search-icon {
     position: fixed;
-    left: 0;
-    top: 0;
-    padding: 0.2em 2.2em;
+    left: 45px;
+    top: 6px;
     font-size: 3.5rem;
     z-index: 10;
   }
@@ -1367,15 +1432,17 @@ footer {
     transition: transform 250ms ease-in, opacity 250ms ease-in;
   }
   html header .container .main-navigation ul {
-    padding: 12em 5em;
+    padding: 8em 5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 5em;
+    gap: 6em;
   }
   html header .container .main-navigation ul li {
+    font-size: 1.5rem;
     list-style-type: none;
     text-align: center;
+    font-weight: bold;
   }
   html header .container .main-navigation.show {
     transform: translatex(0);
@@ -1385,6 +1452,11 @@ footer {
     left: 46%;
     top: -5px;
     position: fixed;
+  }
+  html main .history-section .our-history {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   html main .homepage-feeds .feed-container {
     flex-direction: column;
@@ -1416,7 +1488,10 @@ footer {
   html .page-container .link-list li a .related-post-container .text-overlay {
     opacity: 1;
   }
-  html .contact-wrapper .map-container {
+  html .contact-wrapper .map-wrapper {
+    flex-direction: column;
+  }
+  html .contact-wrapper .map-wrapper .map-container {
     width: 60%;
   }
   html .search-overlay .results-container .row {
@@ -1428,39 +1503,30 @@ footer {
     gap: 1em;
   }
 }
-/* PHONE LANDSCAPE */
-@media screen and (min-width: 480px) {
-  html {
-    font-size: 55%;
+@media screen and (min-width: 374px) {
+  html header .container .main-navigation ul {
+    padding-top: 8em;
+    gap: 7em;
   }
-  html header .container .hamburger {
-    top: 0;
+  html header .container .main-navigation ul li {
+    font-size: 1.8rem;
   }
-  html header .container #search-icon {
-    padding: 0 2em;
-    font-size: 2.8rem;
-  }
-  /* TABLET */
-  /* DESKTOP & TABLET LANDSCAPE */
-  /* LARGE SCREENS */
 }
-@media screen and (min-width: 480px) and (min-width: 768px) and (orientation: portrait) {
+/* TABLET */
+@media screen and (min-width: 768px) and (orientation: portrait) {
   html {
-    font-size: 75%;
+    font-size: 80%;
   }
   html header .container .hamburger {
-    top: 0;
+    top: 15px;
   }
   html header .container #search-icon {
-    padding: -0.5em 2.5em;
     top: 8px;
+    left: 50px;
     font-size: 2.2rem;
   }
   html header .container .main-navigation ul {
     gap: 8em;
-  }
-  html header .container .main-navigation ul li {
-    font-size: 1.2rem;
   }
   html header .container .main-title {
     left: 47%;
@@ -1473,7 +1539,8 @@ footer {
     height: 100%;
   }
 }
-@media screen and (min-width: 480px) and (min-width: 992px) {
+/* DESKTOP & TABLET LANDSCAPE */
+@media screen and (min-width: 992px) {
   html {
     font-size: 80%;
   }
@@ -1488,9 +1555,9 @@ footer {
   html header .container #search-icon {
     position: relative;
     font-size: 1rem;
-    top: 26px;
+    top: 23px;
     left: -70px;
-    padding: 0;
+    padding: 0 0.5em;
     transition: transform 0.2s ease-in;
   }
   html header .container #search-icon:hover {
@@ -1510,7 +1577,7 @@ footer {
   html header .container .main-navigation ul {
     display: flex;
     flex-direction: row;
-    padding: 1em 0;
+    padding: 0;
     gap: 4em;
   }
   html header .container .main-navigation ul li {
@@ -1523,6 +1590,10 @@ footer {
     cursor: pointer;
     text-decoration: underline;
     text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+  }
+  html main .history-section .our-history {
+    flex-direction: row;
   }
   html main .homepage-feeds .feed-container {
     flex-direction: row;
@@ -1544,6 +1615,9 @@ footer {
   html .page-container .link-list li a:hover .related-post-container .text-overlay {
     opacity: 1;
   }
+  html .contact-wrapper .map-wrapper {
+    flex-direction: row;
+  }
   html .search-overlay .results-container .row {
     flex-direction: row;
     align-items: initial;
@@ -1552,13 +1626,14 @@ footer {
     gap: 2em;
   }
 }
-@media screen and (min-width: 480px) and (min-width: 1200px) {
+/* LARGE SCREENS */
+@media screen and (min-width: 1200px) {
   html {
     font-size: 100%;
   }
   html header .container #search-icon {
-    top: 32px;
-    left: -70px;
+    top: 30px;
+    left: -80px;
   }
   html header .container .main-navigation {
     right: 30px;
@@ -1571,8 +1646,7 @@ footer {
 }
 @media screen and (min-width: 1920px) {
   header .container #search-icon {
-    top: 32px;
-    margin-left: -4em;
+    left: -70px;
   }
   header .container .main-navigation ul li {
     margin-right: 4em;

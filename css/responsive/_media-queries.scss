@@ -10,11 +10,18 @@
     min-height: 100%;
     min-width: 100%;
     font-size: 45%;
-    overflow-x: hidden;
 
     @import 'mobile-menu';
 
     main {
+      .history-section {
+        .our-history {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
       .homepage-feeds {
         .feed-container {
           flex-direction: column;
@@ -121,7 +128,7 @@
         }
 
         #search-icon {
-          top: 9px;
+          top: 8px;
           left: 50px;
           font-size: 2.2rem;
         }
@@ -171,7 +178,7 @@
         #search-icon {
           position: relative;
           font-size: 1rem;
-          top: 26px;
+          top: 23px;
           left: -70px;
           padding: 0 0.5em;
           transition: transform 0.2s ease-in;
@@ -208,6 +215,7 @@
                   cursor: pointer;
                   text-decoration: underline;
                   text-underline-offset: 8px;
+                  text-decoration-thickness: 3px;
                 }
               }
             }
@@ -217,6 +225,11 @@
     }
 
     main {
+      .history-section {
+        .our-history {
+          flex-direction: row;
+        }
+      }
       .homepage-feeds {
         .feed-container {
           flex-direction: row;
@@ -285,8 +298,8 @@
     header {
       .container {
         #search-icon {
-          top: 32px;
-          left: -70px;
+          top: 30px;
+          left: -80px;
         }
 
         .main-navigation {
@@ -309,8 +322,7 @@
   header {
     .container {
       #search-icon {
-        top: 32px;
-        margin-left: -4em;
+        left: -70px;
       }
 
       .main-navigation {

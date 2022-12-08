@@ -7,6 +7,7 @@ import MyComments from './modules/MyComments';
 import Like from './modules/Like';
 import Navbar from './modules/NavbarScroll';
 import ContactForm from './modules/ContactForm';
+import { animateOnScroll } from './modules/animateOnScroll';
 
 // Instantiate a new object using our modules/classes
 const mobileMenu = new MobileMenu();
@@ -15,3 +16,4 @@ const myComments = new MyComments();
 const likes = new Like();
 const navbar = new Navbar();
 const contactForm = new ContactForm();
+animateOnScroll();

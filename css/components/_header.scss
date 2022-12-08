@@ -7,7 +7,8 @@ header {
   height: 5em;
   padding: 0;
   z-index: 10;
-  transition: top 0.2s ease-in;
+  transition: top 0.6s ease;
+  box-shadow: 0 6px 6px -6px gray;
 
   &.hide {
     top: -100px;
@@ -43,6 +44,9 @@ header {
       a {
         text-shadow: 1px #ff0000;
         color: lightgray;
+        text-decoration: underline;
+        text-underline-offset: 8px;
+        text-decoration-thickness: 3px;
       }
     }
   }

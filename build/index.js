@@ -16,7 +16,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_Like__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/Like */ "./src/modules/Like.js");
 /* harmony import */ var _modules_NavbarScroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/NavbarScroll */ "./src/modules/NavbarScroll.js");
 /* harmony import */ var _modules_ContactForm__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/ContactForm */ "./src/modules/ContactForm.js");
+/* harmony import */ var _modules_animateOnScroll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/animateOnScroll */ "./src/modules/animateOnScroll.js");
  // Modules / Classes
+
 
 
 
@@ -31,6 +33,7 @@ const myComments = new _modules_MyComments__WEBPACK_IMPORTED_MODULE_3__["default
 const likes = new _modules_Like__WEBPACK_IMPORTED_MODULE_4__["default"]();
 const navbar = new _modules_NavbarScroll__WEBPACK_IMPORTED_MODULE_5__["default"]();
 const contactForm = new _modules_ContactForm__WEBPACK_IMPORTED_MODULE_6__["default"]();
+(0,_modules_animateOnScroll__WEBPACK_IMPORTED_MODULE_7__.animateOnScroll)();
 
 /***/ }),
 
@@ -205,11 +208,9 @@ class MobileMenu {
 
   closeMenu(e) {
     if (!e.target.closest('.hamburger') && !e.target.closest('.main-navigation') && this.mobileNav.classList.contains('show')) {
-      console.log('close');
       this.mobileNav.classList.toggle('show');
       this.hamburgerMenu.classList.toggle('clicked');
       document.documentElement.classList.toggle('no-scroll');
-      console.log('test');
     }
   }
 
@@ -465,19 +466,17 @@ __webpack_require__.r(__webpack_exports__);
 class Navbar {
   constructor() {
     this.header = document.querySelector('.site-header');
-    this.events();
     this.hasScrolled;
     this.lastScrollTop = 0;
-    this.delta = 5;
     this.navbarHeight = this.header.getBoundingClientRect().height;
+    this.events();
   }
 
   events() {
     window.addEventListener('scroll', () => {
-      // Hide navbar only on bigger screens
+      // Hide navbar on bigger screens
       if (window.innerWidth >= 992) {
-        this.hasScrolled = true; // Check condition every 250ms
-
+        this.hasScrolled = true;
         setInterval(() => {
           if (this.hasScrolled) {
             this.scroll();
@@ -489,15 +488,13 @@ class Navbar {
   }
 
   scroll() {
-    // Get current scroll value
-    let prev = window.pageYOffset; // Make sure they scroll more than delta, which may fix Safari scenario
-    // if (Math.abs(this.lastScrollTop - prev) <= this.delta) return;
-    // If they scrolled down and are past the navbar, add class .hide
+    let prev = window.pageYOffset;
 
     if (prev > this.lastScrollTop && prev > this.navbarHeight) {
       // Scroll Down
       this.header.classList.add('hide');
     } else {
+      // Scroll Up
       this.header.classList.remove('hide');
     }
 
@@ -648,6 +645,33 @@ class Search {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Search);
+
+/***/ }),
+
+/***/ "./src/modules/animateOnScroll.js":
+/*!****************************************!*\
+  !*** ./src/modules/animateOnScroll.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "animateOnScroll": () => (/* binding */ animateOnScroll)
+/* harmony export */ });
+function animateOnScroll() {
+  const elements = document.querySelectorAll('[data-observe]');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle('active', entry.isIntersecting);
+      if (entry.isIntersecting) observer.unobserve(entry.target);
+    });
+  }, {
+    treshold: 0.7
+  });
+  [...elements].forEach(element => {
+    observer.observe(element);
+  });
+}
 
 /***/ }),
 

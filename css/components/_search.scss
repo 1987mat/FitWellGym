@@ -10,7 +10,7 @@
   height: 100%;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 250ms ease-in;
+  transition: opacity 0.3s ease;
 
   /* FADE IN - FADE OUT ANIMATION */
   &.show {

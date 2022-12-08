@@ -5,7 +5,7 @@
 
 <main class="main-body-content">
   <section class="heading-section">
-    <div class="heading">
+    <div class="heading" data-observe>
       <a href="#classes">
         <h1>Helping you reach your fitness goals.</h1>
         <h2>Ready to get in shape?</h2>
@@ -14,19 +14,22 @@
   </section>
 
   <section class="history-section">
-    <h2>Our Story</h2>
-    <div class="our-history">
+    <h2 data-observe>Our Story</h2>
+    <div class="our-history" data-observe>
       <?php
         $img_src = get_template_directory_uri() . '/images/history-img.jpg';
       ?>
       <img src="<?php echo $img_src ?>">
-      <p>Our Fit&Well gym was established in 2005. The founder M.C. is a professional fitness trainer with decades of experience in the field. We are so thrilled to welcome you and get started on your fitness journey.</p>
+      <div class="text-content">
+        <p>Fit&Well gym was established in 2005. The founder, M.R., is a professional fitness trainer with decades of experience in the field. </p>
+        <p>Our facility offers various <a href="#classes">classes</a> and <a href="#workout-programs">programs</a>. We are so thrilled to welcome you and get started on your fitness journey!</p>
+      </div>    
     </div>
   </section>
 
   <section class="homepage-classes" id="classes">
-    <h2>Classes</h2>
-    <div class="classes-container">
+    <h2 data-observe>Classes</h2>
+    <div class="classes-container" data-observe>
       <?php 
           // Create custom query for Class posts
           $homepageClasses = new WP_Query(array(
@@ -53,31 +56,30 @@
     </div>
   </section>
 
-  <section class="homepage-workouts">
-    <h2>Workout Plans</h2>
-    <div class="workout-heading">  
+  <section class="homepage-workouts" id="workout-programs">
+    <h2 data-observe>Workout Plans</h2>
+    <div class="workout-heading" data-observe>  
       <a href="<?php echo get_post_type_archive_link('workout'); ?>">View More</a>
     </div>
   </section>
 
   <section class="homepage-events"> 
-    <div class="events-heading">
+    <div class="events-heading" data-observe>
       <a href="<?php echo get_post_type_archive_link('event'); ?>">Events & More</a>
     </div>
   </section>
 
   <section class="homepage-feeds"> 
-    <h2>Follow Us!</h2>
-    <div class="social-media-container">
+    <h2 data-observe>Follow Us!</h2>
+    <div class="social-media-container" data-observe>
       <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-official"></i></a>
       <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
       <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
       <a href="https://pinterest.com" target="_blank"><i class="fa fa-pinterest"></i></a>
     </div>
-    <div class="feed-container">
+    <div class="feed-container" data-observe>
 
       <?php 
-
         $src1 = get_template_directory_uri() . '/images/feed1.jpg';
         $src2 = get_template_directory_uri() . '/images/feed2.jpg';
         $src3 = get_template_directory_uri() . '/images/feed3.jpg';
@@ -86,9 +88,7 @@
         
         for ($x = 0; $x < count($images); $x++) {
         ?>
-
           <img src="<?php echo $images[$x];?>">
-
         <?php 
         }
       ?>

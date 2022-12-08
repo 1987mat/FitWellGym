@@ -10,11 +10,11 @@
     padding: 3em;
     margin-top: 3em;
     width: 60%;
+    opacity: 1;
+    transform: translateY(100px);
+    transition: transform 0.9s ease, opacity 0.5s ease;
 
     a {
-      opacity: 1;
-      transition: opacity 0.3s ease-in;
-
       h1 {
         font-size: 3rem;
         color: rgb(250, 244, 244);
@@ -26,10 +26,14 @@
         float: left;
         font-style: italic;
       }
+    }
 
-      &:hover {
-        opacity: 0.7;
-      }
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &.active {
+      transform: translateY(0);
     }
   }
 }
