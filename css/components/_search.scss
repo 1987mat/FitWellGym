@@ -104,9 +104,10 @@
 
     .row {
       display: flex;
-      justify-content: space-around;
-      gap: 2em;
+      justify-content: space-evenly;
+      gap: 1em;
       margin-bottom: 20em;
+      width: 100%;
 
       .one-third {
         display: flex;
@@ -135,8 +136,7 @@
         /* Style classes and workouts search list */
         .search-list {
           display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
+          flex-direction: column;
           gap: 2em;
 
           li {
@@ -145,12 +145,10 @@
             .image-link {
               text-decoration: none;
               position: relative;
-              width: 20em;
-              height: 15em;
 
               img {
                 border-radius: 5px;
-                width: 80%;
+                width: 100%;
               }
 
               span {
@@ -165,12 +163,12 @@
                 height: 2em;
                 padding-top: 0.5em;
                 opacity: 1;
-                transition: all 0.2s ease-in;
+                transition: all 0.4s ease-in;
               }
             }
 
             &:hover {
-              transform: scale(1.1);
+              transform: scale(1.01);
             }
           }
         }

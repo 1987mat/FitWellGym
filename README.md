@@ -18,7 +18,7 @@
 
 ## Screenshots
 
-<img src="https://user-images.githubusercontent.com/64235918/198388073-8cba0f51-13e3-49ca-85a6-7848125c13d0.png" width="400"/>
+<img src="https://user-images.githubusercontent.com/64235918/207199736-ab9e7342-47b6-48fb-b064-6ababe31c2e1.png" width="400"/>
 
 ## Built With
 

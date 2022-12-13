@@ -1324,9 +1324,10 @@ footer {
 }
 .search-overlay .results-container .row {
   display: flex;
-  justify-content: space-around;
-  gap: 2em;
+  justify-content: space-evenly;
+  gap: 1em;
   margin-bottom: 20em;
+  width: 100%;
 }
 .search-overlay .results-container .row .one-third {
   display: flex;
@@ -1351,8 +1352,7 @@ footer {
 }
 .search-overlay .results-container .row .one-third .search-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   gap: 2em;
 }
 .search-overlay .results-container .row .one-third .search-list li {
@@ -1361,12 +1361,10 @@ footer {
 .search-overlay .results-container .row .one-third .search-list li .image-link {
   text-decoration: none;
   position: relative;
-  width: 20em;
-  height: 15em;
 }
 .search-overlay .results-container .row .one-third .search-list li .image-link img {
   border-radius: 5px;
-  width: 80%;
+  width: 100%;
 }
 .search-overlay .results-container .row .one-third .search-list li .image-link span {
   position: absolute;
@@ -1380,10 +1378,10 @@ footer {
   height: 2em;
   padding-top: 0.5em;
   opacity: 1;
-  transition: all 0.2s ease-in;
+  transition: all 0.4s ease-in;
 }
 .search-overlay .results-container .row .one-third .search-list li:hover {
-  transform: scale(1.1);
+  transform: scale(1.01);
 }
 
 .blog-section {
@@ -1656,7 +1654,7 @@ footer {
   }
   html header .container #search-icon {
     top: 30px;
-    left: -75px;
+    left: -60px;
   }
   html header .container .main-navigation {
     right: 30px;
