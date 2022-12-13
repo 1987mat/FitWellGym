@@ -13,8 +13,8 @@
         <span class="bar bar-1"></span>
         <span class="bar bar-2"></span>
         <span class="bar bar-3"></span>
-    </div>
-      <a href="<?php echo site_url(); ?>" class="main-title"></a> 
+      </div>
+      <a href="<?php echo site_url(); ?>" class="logo"></a> 
       <nav class="main-navigation">
         <ul>
           <li <?php if(is_page('home')) echo 'class="current-menu-item"'?>><a href="<?php echo site_url(); ?>">Home</a></li>

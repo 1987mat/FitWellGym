@@ -6,7 +6,7 @@
 
 - Advanced Custom Fields (Pods Plug-in)
 
-- Search funcionality with Fetch | WP REST API
+- Search functionality with Fetch | WP REST API
 
 - CRUD actions (Create,edit and delete comments)
 

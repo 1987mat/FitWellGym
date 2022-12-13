@@ -4,32 +4,49 @@
   background-position: center;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .heading {
-    text-align: start;
-    padding: 3em;
-    margin-top: 3em;
-    width: 60%;
-    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 2em;
     transform: translateY(100px);
-    transition: transform 0.9s ease, opacity 0.5s ease;
+    transition: transform 0.9s ease;
 
-    a {
-      h1 {
-        font-size: 3rem;
-        color: rgb(250, 244, 244);
-      }
-
-      h2 {
-        color: rgb(250, 244, 244);
-        margin-top: -1em;
-        float: left;
-        font-style: italic;
-      }
+    h1 {
+      font-size: 3.2rem;
+      color: rgb(250, 244, 244);
+      text-align: center;
     }
 
-    &:hover {
-      opacity: 0.8;
+    h2 {
+      color: rgb(250, 244, 244);
+      margin-top: -1em;
+      font-style: italic;
+    }
+
+    .hero-btn {
+      background-color: #0728a5;
+      border-radius: 5px;
+      border: 0;
+      color: rgb(250, 244, 244);
+      padding: 1em;
+      text-align: center;
+      width: 10em;
+      box-shadow: 0 0 8px #282828;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+        background-color: #0066b2;
+      }
     }
 
     &.active {

@@ -48,8 +48,8 @@ header {
     #search-icon {
       position: fixed;
       left: 45px;
-      top: 6px;
-      font-size: 3.5rem;
+      top: 6.5px;
+      font-size: 3rem;
       z-index: 10;
     }
 
@@ -64,7 +64,7 @@ header {
       transition: transform 250ms ease-in, opacity 250ms ease-in;
 
       ul {
-        padding: 8em 5em;
+        padding: 7em 5em;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -84,9 +84,8 @@ header {
       }
     }
 
-    .main-title {
-      left: 46%;
-      top: -5px;
+    .logo {
+      top: 5px;
       position: fixed;
     }
   }

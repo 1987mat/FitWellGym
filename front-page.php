@@ -6,10 +6,11 @@
 <main class="main-body-content">
   <section class="heading-section">
     <div class="heading" data-observe>
-      <a href="#classes">
+    
         <h1>Helping you reach your fitness goals.</h1>
         <h2>Ready to get in shape?</h2>
-      </a>
+        <a href="#classes" class="hero-btn">CLASSES</a>
+      
     </div>
   </section>
 

@@ -5,7 +5,7 @@
 <!-- CONTACT FORM -->
 <div class="contact-wrapper">
   <div class="form-container">
-    <h1>Get in touch!</h1>
+    <h1>Get in touch</h1>
     <form class="contact-form">
       <input type="text" placeholder="First Name" required>
       <input type="text" placeholder="Last Name" required>
@@ -17,6 +17,11 @@
   <!-- MAP -->
   <h1 class="title">Meet Us</h2>
   <div class="map-wrapper">
+    <div class="hours">
+      <h3>Hours</h3>
+      <p><i>Mon-Fri</i> 6AM-10PM</p>
+      <p><i>Sat-Sun</i> 8AM-5PM</p> 
+    </div>
     <div class="map-container">
       <?php
         $mymap = new Mappress_Map(array("width" => 600));
@@ -24,11 +29,6 @@
         $mymap->pois = array($mypoi); 
         echo $mymap->display();
       ?>
-    </div>
-    <div class="hours">
-      <h3>Hours</h3>
-      <p><i>Mon-Fri</i> 6AM-10PM</p>
-      <p><i>Sat-Sun</i> 8AM-5PM</p> 
     </div>
   </div>
 </div>

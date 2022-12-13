@@ -53,10 +53,10 @@ html body header {
   left: 0;
   width: 100%;
   height: 5em;
-  padding: 0;
   z-index: 10;
   transition: top 0.6s ease;
   box-shadow: 0 6px 6px -6px gray;
+  padding: 0 1em;
 }
 html body header.hide {
   top: -100px;
@@ -71,7 +71,7 @@ html body header .container {
 html body header .container .header-util {
   position: fixed;
   right: 0;
-  padding: 0.5em 0.5em;
+  padding: 1em 0.5em;
 }
 html body header .container .header-util a,
 html body header .container .header-util span {
@@ -91,15 +91,15 @@ html body header .container .current-menu-item a {
   text-underline-offset: 8px;
   text-decoration-thickness: 3px;
 }
-html body header .main-title {
+html body header .logo {
   background-image: url("../images/gym-logo.png");
   background-size: cover;
   background-position: center;
   height: 3.5em;
   width: 13em;
-  margin-left: -5em;
-  margin-right: 2em;
-  margin-top: 1em;
+}
+html body header .logo:hover {
+  opacity: 1;
 }
 html body main {
   display: flex;
@@ -113,28 +113,46 @@ html body main .heading-section {
   background-position: center;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 html body main .heading-section .heading {
-  text-align: start;
-  padding: 3em;
-  margin-top: 3em;
-  width: 60%;
-  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  gap: 2em;
   transform: translateY(100px);
-  transition: transform 0.9s ease, opacity 0.5s ease;
+  transition: transform 0.9s ease;
 }
-html body main .heading-section .heading a h1 {
-  font-size: 3rem;
+html body main .heading-section .heading h1 {
+  font-size: 3.2rem;
   color: rgb(250, 244, 244);
+  text-align: center;
 }
-html body main .heading-section .heading a h2 {
+html body main .heading-section .heading h2 {
   color: rgb(250, 244, 244);
   margin-top: -1em;
-  float: left;
   font-style: italic;
 }
-html body main .heading-section .heading:hover {
-  opacity: 0.8;
+html body main .heading-section .heading .hero-btn {
+  background-color: #0728a5;
+  border-radius: 5px;
+  border: 0;
+  color: rgb(250, 244, 244);
+  padding: 1em;
+  text-align: center;
+  width: 10em;
+  box-shadow: 0 0 8px #282828;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+html body main .heading-section .heading .hero-btn:hover {
+  opacity: 1;
+  background-color: #0066b2;
 }
 html body main .heading-section .heading.active {
   transform: translateY(0);
@@ -303,7 +321,7 @@ html body main .homepage-workouts .workout-heading {
   background-image: url("../images/workout-homepage.jpg");
   background-size: cover;
   background-position: center;
-  width: 70%;
+  width: 70vw;
   height: 30em;
   border-radius: 5px;
   transform: translateY(100px);
@@ -645,6 +663,7 @@ html body .contact-wrapper .form-container .contact-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 0.5em;
   width: 70%;
 }
 html body .contact-wrapper .form-container .contact-form button {
@@ -653,8 +672,9 @@ html body .contact-wrapper .form-container .contact-form button {
   border-radius: 5px;
   border: none;
   font-weight: bold;
-  height: 3.5em;
+  height: 4em;
   background-color: gainsboro;
+  box-shadow: 0 0 5px gray;
   color: #282828;
   transition: background-color 0.2s ease-in;
 }
@@ -668,10 +688,13 @@ html body .contact-wrapper .form-container .contact-form button:active {
 html body .contact-wrapper .form-container .contact-form input,
 html body .contact-wrapper .form-container .contact-form textarea {
   font-family: "Lato", sans-serif;
-  border-top: none;
   border-radius: 5px;
   margin: 0.5em;
   padding: 1em;
+  border: 0;
+}
+html body .contact-wrapper .form-container .contact-form textarea {
+  resize: none;
 }
 html body .contact-wrapper .title {
   font-size: 3rem;
@@ -681,8 +704,13 @@ html body .contact-wrapper .map-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3em;
-  width: 40em;
+  gap: 5em;
+}
+html body .contact-wrapper .map-wrapper .hours {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 html body .contact-wrapper .map-wrapper .map-container {
   display: flex;
@@ -690,15 +718,17 @@ html body .contact-wrapper .map-wrapper .map-container {
   align-items: center;
   position: relative;
   z-index: 1;
-  width: 60%;
 }
 html body .contact-wrapper .map-wrapper .map-container .mapp-layout {
   border: none;
-  margin: 0 auto;
 }
 html body .contact-wrapper .map-wrapper .map-container .mapp-layout .mapp-wrapper .mapp-content {
-  padding-left: 2em;
-  padding-right: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html body .contact-wrapper .map-wrapper .map-container .mapp-layout .mapp-wrapper .mapp-content .mapp-main {
+  width: 80vw;
 }
 html body .page-container-single-post {
   margin: 8em;
@@ -1372,7 +1402,7 @@ footer {
   html {
     min-height: 100%;
     min-width: 100%;
-    font-size: 45%;
+    font-size: 50%;
   }
   html header .container .hamburger {
     width: 2em;
@@ -1412,8 +1442,8 @@ footer {
   html header .container #search-icon {
     position: fixed;
     left: 45px;
-    top: 6px;
-    font-size: 3.5rem;
+    top: 6.5px;
+    font-size: 3rem;
     z-index: 10;
   }
   html header .container .main-navigation {
@@ -1427,7 +1457,7 @@ footer {
     transition: transform 250ms ease-in, opacity 250ms ease-in;
   }
   html header .container .main-navigation ul {
-    padding: 8em 5em;
+    padding: 7em 5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1443,9 +1473,8 @@ footer {
     transform: translatex(0);
     opacity: 1;
   }
-  html header .container .main-title {
-    left: 46%;
-    top: -5px;
+  html header .container .logo {
+    top: 5px;
     position: fixed;
   }
   html main .history-section .our-history {
@@ -1486,9 +1515,6 @@ footer {
   html .contact-wrapper .map-wrapper {
     flex-direction: column;
   }
-  html .contact-wrapper .map-wrapper .map-container {
-    width: 60%;
-  }
   html .search-overlay .results-container .row {
     flex-direction: column;
     align-items: center;
@@ -1499,6 +1525,9 @@ footer {
   }
 }
 @media screen and (min-width: 374px) {
+  html {
+    font-size: 55%;
+  }
   html header .container .main-navigation ul {
     padding-top: 8em;
     gap: 7em;
@@ -1510,49 +1539,45 @@ footer {
 /* TABLET */
 @media screen and (min-width: 768px) and (orientation: portrait) {
   html {
-    font-size: 80%;
+    font-size: 85%;
   }
   html header .container .hamburger {
     top: 15px;
   }
   html header .container #search-icon {
-    top: 8px;
+    top: 7.5px;
     left: 50px;
     font-size: 2.2rem;
   }
   html header .container .main-navigation ul {
-    gap: 8em;
+    gap: 6.5em;
   }
-  html header .container .main-title {
-    left: 47%;
-  }
-  html .contact-wrapper .mapp-layout {
-    border: none;
-  }
-  html .contact-wrapper .mapp-layout .mapp-content {
-    width: 100%;
-    height: 100%;
+}
+/* IPAD PRO 10.5" */
+@media screen and (min-width: 834px) and (orientation: portrait) {
+  html header .container .main-navigation ul {
+    gap: 7.5em;
   }
 }
 /* DESKTOP & TABLET LANDSCAPE */
 @media screen and (min-width: 992px) {
   html {
-    font-size: 80%;
+    font-size: 90%;
   }
   html header .container .hamburger {
     visibility: hidden;
     display: none;
   }
-  html header .container .main-title {
+  html header .container .logo {
     position: relative;
-    left: 0;
+    top: 10px;
+    right: 70px;
   }
   html header .container #search-icon {
     position: relative;
     font-size: 1rem;
-    top: 23px;
-    left: -70px;
-    padding: 0 0.5em;
+    top: 27px;
+    left: -60px;
     transition: transform 0.2s ease-in;
   }
   html header .container #search-icon:hover {
@@ -1563,7 +1588,7 @@ footer {
     width: auto;
     min-height: 4em;
     top: 0;
-    left: -30px;
+    left: -40px;
     visibility: visible;
     opacity: 1;
     transform: initial;
@@ -1573,7 +1598,7 @@ footer {
     display: flex;
     flex-direction: row;
     padding: 0;
-    gap: 4em;
+    gap: 3em;
   }
   html header .container .main-navigation ul li {
     list-style-type: none;
@@ -1610,15 +1635,18 @@ footer {
   html .page-container .link-list li a:hover .related-post-container .text-overlay {
     opacity: 1;
   }
-  html .contact-wrapper .map-wrapper {
-    flex-direction: row;
-  }
   html .search-overlay .results-container .row {
     flex-direction: row;
     align-items: initial;
   }
   html .search-overlay .results-container .row .single-event {
     gap: 2em;
+  }
+}
+/* IPAD PRO 10.5" LANDSCAPE */
+@media screen and (min-width: 1112px) {
+  html header .container #search-icon {
+    left: -80px;
   }
 }
 /* LARGE SCREENS */
@@ -1628,10 +1656,13 @@ footer {
   }
   html header .container #search-icon {
     top: 30px;
-    left: -80px;
+    left: -75px;
   }
   html header .container .main-navigation {
     right: 30px;
+  }
+  html header .container .main-navigation ul {
+    gap: 4em;
   }
   html .posts-container .classes-container {
     flex-direction: row;
@@ -1644,6 +1675,26 @@ footer {
     left: -70px;
   }
   header .container .main-navigation ul li {
-    margin-right: 4em;
+    margin-right: 2em;
+  }
+}
+@media screen and (min-width: 2074px) {
+  html header .container .logo {
+    top: 12px;
+  }
+  html header .container #search-icon {
+    left: -170px;
+  }
+  html header .container .main-navigation ul {
+    gap: 4em;
+  }
+}
+@media screen and (min-width: 2559px) {
+  html {
+    font-size: 150%;
+  }
+  html header .container #search-icon {
+    top: 42px;
+    left: -120px;
   }
 }/*# sourceMappingURL=style.css.map */
