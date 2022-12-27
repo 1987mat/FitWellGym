@@ -304,7 +304,7 @@
     header {
       .container {
         .logo {
-          top: 14px;
+          top: 13px;
           right: 80px;
         }
 
@@ -357,6 +357,7 @@
       .container {
         .logo {
           top: 12px;
+          right: 125px;
         }
 
         #search-icon {
@@ -378,6 +379,11 @@
     font-size: 150%;
     header {
       .container {
+        .logo {
+          top: 16px;
+          right: 110px;
+        }
+
         #search-icon {
           top: 42px;
           left: -120px;

@@ -1656,7 +1656,7 @@ footer {
     font-size: 100%;
   }
   html header .container .logo {
-    top: 14px;
+    top: 13px;
     right: 80px;
   }
   html header .container #search-icon {
@@ -1686,6 +1686,7 @@ footer {
 @media screen and (min-width: 2074px) {
   html header .container .logo {
     top: 12px;
+    right: 125px;
   }
   html header .container #search-icon {
     left: -170px;
@@ -1697,6 +1698,10 @@ footer {
 @media screen and (min-width: 2559px) {
   html {
     font-size: 150%;
+  }
+  html header .container .logo {
+    top: 16px;
+    right: 110px;
   }
   html header .container #search-icon {
     top: 42px;
