@@ -83,9 +83,10 @@
           flex-direction: column;
           align-items: center;
 
-          .single-event {
-            display: flex;
-            gap: 1em;
+          .one-third {
+            .single-event {
+              margin: 0 auto;
+            }
           }
         }
       }
@@ -169,8 +170,8 @@
 
         .logo {
           position: relative;
-          top: 10px;
-          right: 70px;
+          top: 12px;
+          right: 65px;
         }
 
         #search-icon {
@@ -302,6 +303,11 @@
 
     header {
       .container {
+        .logo {
+          top: 14px;
+          right: 80px;
+        }
+
         #search-icon {
           top: 30px;
           left: -60px;
