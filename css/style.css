@@ -78,6 +78,10 @@ html body header .container .header-util span {
   font-size: 0.5rem;
   margin-right: 0.5em;
   opacity: 1;
+  text-decoration: none;
+  transition: opacity 0.9s ease, -webkit-text-decoration 0.9s ease;
+  transition: opacity 0.9s ease, text-decoration 0.9s ease;
+  transition: opacity 0.9s ease, text-decoration 0.9s ease, -webkit-text-decoration 0.9s ease;
 }
 html body header .container .header-util a a:hover,
 html body header .container .header-util span a:hover {
@@ -86,7 +90,7 @@ html body header .container .header-util span a:hover {
 }
 html body header .container .current-menu-item a {
   text-shadow: 1px #ff0000;
-  color: lightgray;
+  color: gray;
   text-decoration: underline;
   text-underline-offset: 8px;
   text-decoration-thickness: 3px;
@@ -162,12 +166,13 @@ html body main .history-section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 3em;
+  margin-top: 4em;
 }
 html body main .history-section h2 {
   font-size: 2.5rem;
   transform: translateY(100px);
   transition: transform 0.9s ease;
+  margin-bottom: 1em;
 }
 html body main .history-section h2.active {
   transform: translateY(0);
@@ -175,15 +180,15 @@ html body main .history-section h2.active {
 html body main .history-section .our-history {
   text-align: center;
   display: flex;
-  margin: 5em;
   justify-content: center;
-  align-items: flex-start;
+  margin: 5em;
   gap: 4em;
   transform: translateY(100px);
   transition: transform 0.9s ease;
 }
 html body main .history-section .our-history img {
-  width: 30em;
+  max-width: 80%;
+  height: auto;
   border-radius: 5px;
 }
 html body main .history-section .our-history .text-content {
@@ -228,12 +233,12 @@ html body main .homepage-classes .classes-container {
   transform: translateY(100px);
   transition: transform 0.9s ease;
 }
-html body main .homepage-classes .classes-container .single-class h4 {
+html body main .homepage-classes .classes-container .single-class h3 {
   position: relative;
   top: 40%;
   width: 50%;
   margin: 0 auto;
-  font-size: 2.3rem;
+  font-size: 2.25rem;
   font-weight: bolder;
   padding: 0.5em;
   color: white;
@@ -1481,7 +1486,6 @@ footer {
   }
   html main .history-section .our-history {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
   html main .homepage-feeds .feed-container {

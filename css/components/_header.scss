@@ -30,6 +30,8 @@ header {
         font-size: 0.5rem;
         margin-right: 0.5em;
         opacity: 1;
+        text-decoration: none;
+        transition: opacity 0.9s ease, text-decoration 0.9s ease;
 
         a {
           &:hover {
@@ -43,7 +45,7 @@ header {
     .current-menu-item {
       a {
         text-shadow: 1px #ff0000;
-        color: lightgray;
+        color: gray;
         text-decoration: underline;
         text-underline-offset: 8px;
         text-decoration-thickness: 3px;

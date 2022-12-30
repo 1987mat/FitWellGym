@@ -14,32 +14,32 @@
         <span class="bar bar-2"></span>
         <span class="bar bar-3"></span>
       </div>
-      <a href="<?php echo site_url(); ?>" class="logo"></a> 
+      <a href="<?php echo site_url(); ?>" class="logo" aria-label="logo-link"></a> 
       <nav class="main-navigation">
         <ul>
-          <li <?php if(is_page('home')) echo 'class="current-menu-item"'?>><a href="<?php echo site_url(); ?>">Home</a></li>
-          <li <?php if(get_post_type() == 'workout') echo 'class="current-menu-item"'?>><a href="<?php echo get_post_type_archive_link('workout'); ?>">Workouts</a></li>
-          <li <?php if(get_post_type() == 'class') echo 'class="current-menu-item"'?>><a href="<?php echo get_post_type_archive_link('class'); ?>">Classes</a></li>
-          <li <?php if(get_post_type() == 'event' or is_page('past-events')) echo 'class="current-menu-item"'?>><a href="<?php echo get_post_type_archive_link('event'); ?>">Events</a></li?>
-          <li <?php if(get_post_type() == 'post') echo 'class="current-menu-item"'?>><a href="<?php echo site_url('/blog'); ?>">Blog</a></li?>
-          <li <?php if(is_page('about') or wp_get_post_parent_id(0) == 16) echo 'class="current-menu-item"'?>><a href="<?php echo site_url('/about'); ?>">About</a></li?>
-          <li <?php if(is_page('contact') or wp_get_post_parent_id(0) == 2) echo 'class="current-menu-item"'?>><a href="<?php echo site_url('/contact'); ?>">Contact</a></li>
+          <li <?php if(is_page('home')) echo 'class="current-menu-item"'?>><a href="<?php echo site_url(); ?>" aria-label="home">Home</a></li>
+          <li <?php if(get_post_type() == 'workout') echo 'class="current-menu-item"'?>><a href="<?php echo get_post_type_archive_link('workout'); ?>" aria-label="workouts">Workouts</a></li>
+          <li <?php if(get_post_type() == 'class') echo 'class="current-menu-item"'?>><a href="<?php echo get_post_type_archive_link('class'); ?>" aria-label="classes">Classes</a></li>
+          <li <?php if(get_post_type() == 'event' or is_page('past-events')) echo 'class="current-menu-item"'?>><a href="<?php echo get_post_type_archive_link('event'); ?>" aria-label="events">Events</a></li?>
+          <li <?php if(get_post_type() == 'post') echo 'class="current-menu-item"'?>><a href="<?php echo site_url('/blog'); ?>" aria-label="blog">Blog</a></li?>
+          <li <?php if(is_page('about') or wp_get_post_parent_id(0) == 16) echo 'class="current-menu-item"'?>><a href="<?php echo site_url('/about'); ?>" aria-label="about">About</a></li?>
+          <li <?php if(is_page('contact') or wp_get_post_parent_id(0) == 2) echo 'class="current-menu-item"'?>><a href="<?php echo site_url('/contact'); ?>" aria-label="contact">Contact</a></li>
         </ul>
       </nav>
-      <a onclick="return false;" href="<?php echo esc_url(site_url('/search'));?>"><i class="fa fa-search" id="search-icon"></i></a>
+      <a onclick="return false;" href="<?php echo esc_url(site_url('/search'));?>" aria-label="search"><i class="fa fa-search" id="search-icon"></i></a>
       <div class="header-util">
         <!-- Leave a comment if user is logged in or Log Out  -->
          <?php if(is_user_logged_in()) { ?>
           <!-- Leave comment button -->
-          <a href="<?php echo esc_url(site_url('/my-comments'));?>">Forum</a>
+          <a href="<?php echo esc_url(site_url('/my-comments'));?>" aria-label="comments">Forum</a>
           <a class="logout-link" href="<?php echo wp_logout_url(get_permalink()); ?>">
             <span><?php echo get_avatar(get_current_user_id(), 14);?></span>
             <span>Log Out</span>
           </a>
           <!-- Login if user is logged out or Sign up if new user -->
         <?php } else { ?>
-          <a class="login-link" href="<?php echo wp_login_url(get_permalink());?>">Login</a>
-          <a class="signup-link" href="<?php echo wp_registration_url();?>">Sign Up</a>
+          <a class="login-link" href="<?php echo wp_login_url(get_permalink());?>" aria-label="login">Login</a>
+          <a class="signup-link" href="<?php echo wp_registration_url();?>" aria-label="signup">Sign Up</a>
          <?php }
         ?> 
       </div>

@@ -18,7 +18,7 @@
     the_post();
     pageBanner();
 
-  ?>
+    ?>
 
     <div class="create-comment">
       <span class="message"></span>

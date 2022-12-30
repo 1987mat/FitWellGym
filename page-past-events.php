@@ -10,7 +10,7 @@
 </div>
 
 <div class="page-container"> 
-  <a href="<?php echo get_post_type_archive_link('event');?>" class="all-events-link">All Events</a>
+  <a href="<?php echo get_post_type_archive_link('event');?>" class="all-events-link" aria-label="all-events">All Events</a>
 
   <?php 
     

@@ -5,7 +5,7 @@
 <!-- CONTACT FORM -->
 <div class="contact-wrapper">
   <div class="form-container">
-    <h1>Get in touch</h1>
+    <h1>Get In Touch</h1>
     <form class="contact-form">
       <input type="text" placeholder="First Name" required>
       <input type="text" placeholder="Last Name" required>

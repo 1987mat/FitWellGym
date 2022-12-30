@@ -11,7 +11,7 @@ while(have_posts()) {
     <?php pageBanner();?>     
     
     <div class="metabox">
-        <a href="<?php echo get_post_type_archive_link('workout'); ?>">All Workouts</a>
+      <a href="<?php echo get_post_type_archive_link('workout'); ?>" aria-label="all-workouts">All Workouts</a>
     </div>
 
     <div class="generic-content-single-workout">

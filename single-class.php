@@ -9,7 +9,7 @@ while(have_posts()) {
     <?php pageBanner(); ?>
 
     <div class="metabox">
-        <a href="<?php echo get_post_type_archive_link('class'); ?>">All Classes</a>
+        <a href="<?php echo get_post_type_archive_link('class'); ?>" aria-label="classes">All Classes</a>
     </div>
 
     <div class="generic-content-single-class">
@@ -35,9 +35,9 @@ while(have_posts()) {
           // Display link with the related workout post based on the id
           ?>  
           <li>
-            <a class="related-post" href="<?php echo get_permalink( $id ) ?>">
+            <a class="related-post" href="<?php echo get_permalink( $id ) ?>" aria-label="related-post">
               <div class="related-post-container">
-                <img class="post-image" src="<?php echo get_the_post_thumbnail_url($id);?>">
+                <img class="post-image" src="<?php echo get_the_post_thumbnail_url($id);?>" alt="post">
                 <div class="text-overlay">
                   <h3 class="post-title"><?php echo get_the_title($id) ;?></h3>
                 </div>

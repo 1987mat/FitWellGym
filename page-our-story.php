@@ -15,14 +15,14 @@
         if($theParent) {
           ?> 
           <div class="metabox">
-            <span>Back To <a href="<?php echo get_permalink($theParent); ?>"><?php echo get_the_title($theParent);?></a></span>
+            <span>Back To <a href="<?php echo get_permalink($theParent); ?>" aria-label="back-to"><?php echo get_the_title($theParent);?></a></span>
           </div>
         <?php
         } 
       ?>
 
       <div class="about-container">
-          <img src="<?php echo get_the_post_thumbnail_url();?>" class="about-image">
+          <img src="<?php echo get_the_post_thumbnail_url();?>" class="about-image" alt="about-image">
           <div>
             <?php the_content();?>
           </div>

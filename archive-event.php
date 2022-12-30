@@ -36,7 +36,7 @@
       echo paginate_links();
       ?> 
     <hr>
-    <p>Looking for a recap of past events? Check out our <a href="<?php echo site_url('/past-events');?>" class="past-events-link">past events!</a></p>
+    <p>Looking for a recap of past events? Check out our <a href="<?php echo site_url('/past-events');?>" class="past-events-link" aria-label="past-events">past events!</a></p>
   </div>
 </div>
 

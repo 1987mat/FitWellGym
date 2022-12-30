@@ -12,7 +12,7 @@ while(have_posts()) {
 
     <p class="event-time"><?php the_time('F j y'); ?></p>
     <div class="metabox">
-        <a href="<?php echo get_post_type_archive_link('event'); ?>">Go Back</a>
+        <a href="<?php echo get_post_type_archive_link('event'); ?>" aria-label="go-back">Go Back</a>
     </div>
   
     <div class="generic-content-single-event">
@@ -77,9 +77,9 @@ while(have_posts()) {
           $id = $rel[ 'ID' ];
           ?>
           <li>
-            <a class="related-post" href="<?php echo get_permalink( $id ) ?>">
+            <a class="related-post" href="<?php echo get_permalink( $id ) ?>" aria-label="related-post">
               <div class="related-post-container">
-                <img class="post-image" src="<?php echo get_the_post_thumbnail_url($id);?>">
+                <img class="post-image" src="<?php echo get_the_post_thumbnail_url($id);?>" alt="post">
                 <div class="text-overlay">
                   <h3 class="post-title"><?php echo get_the_title($id) ;?></h3>
                 </div>

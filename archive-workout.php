@@ -20,8 +20,8 @@
     while($workouts->have_posts()) {
       $workouts->the_post();     
       ?>
-        <a class="single-workout" href="<?php the_permalink();?>"> 
-          <img src="<?php echo get_the_post_thumbnail_url();?>" class="workout-card-image">
+        <a class="single-workout" href="<?php the_permalink();?>" aria-label="single-workout"> 
+          <img src="<?php echo get_the_post_thumbnail_url();?>" class="workout-card-image" alt="workout-card">
           <h3><?php the_title();?></h3>
        </a>
       <?php }

@@ -3,7 +3,6 @@
 ?>
 
 <div class="page-container-about"> 
-
   <?php
     while(have_posts()) {
       the_post(); 
@@ -27,7 +26,6 @@
               $findChildrenOf = get_the_ID();
             }
 
-            // Associative array
             wp_list_pages(array(
               'title_li' => NULL,
               'child_of' => $findChildrenOf,
@@ -44,7 +42,7 @@
       if($theParent) {
         ?> 
         <div class="metabox">
-          <a href="<?php echo get_permalink($theParent); ?>">Go Back To <?php echo get_the_title($theParent);?></a>
+          <a href="<?php echo get_permalink($theParent); ?>" aria-label="go-back">Go Back To <?php echo get_the_title($theParent);?></a>
           <p><?php the_title(); ?>
         </div>
       <?php
@@ -52,7 +50,7 @@
     ?>
     <div class="about-container">
       <?php the_content();?>
-      <img src="<?php echo get_the_post_thumbnail_url();?>" class="about-image">
+      <img src="<?php echo get_the_post_thumbnail_url();?>" class="about-image" alt="about-image">
     </div>
 </div>
 
