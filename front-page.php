@@ -86,7 +86,7 @@
         
         for ($x = 0; $x < count($images); $x++) {
         ?>
-          <img src="<?php echo $images[$x];?>">
+          <img src="<?php echo $images[$x];?>" alt="feed">
         <?php 
         }
       ?>
