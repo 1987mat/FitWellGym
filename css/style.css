@@ -132,9 +132,11 @@ html body main .heading-section .heading {
   transition: transform 0.9s ease;
 }
 html body main .heading-section .heading h1 {
-  font-size: 3.2rem;
+  font-size: 3.5rem;
   color: rgb(250, 244, 244);
   text-align: center;
+  line-height: 1.2;
+  width: 100%;
 }
 html body main .heading-section .heading h2 {
   color: rgb(250, 244, 244);
@@ -146,9 +148,9 @@ html body main .heading-section .heading .hero-btn {
   border-radius: 5px;
   border: 0;
   color: rgb(250, 244, 244);
-  padding: 1em;
+  padding: 1.2em;
   text-align: center;
-  width: 10em;
+  width: 12em;
   box-shadow: 0 0 8px #282828;
   font-weight: bold;
   text-decoration: none;
@@ -1468,7 +1470,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 6em;
+    gap: 5em;
   }
   html header .container .main-navigation ul li {
     font-size: 1.5rem;
@@ -1534,8 +1536,8 @@ footer {
     font-size: 55%;
   }
   html header .container .main-navigation ul {
-    padding-top: 8em;
-    gap: 7em;
+    padding-top: 9em;
+    gap: 6.5em;
   }
   html header .container .main-navigation ul li {
     font-size: 1.8rem;
@@ -1555,7 +1557,7 @@ footer {
     font-size: 2.2rem;
   }
   html header .container .main-navigation ul {
-    gap: 6.5em;
+    gap: 7em;
   }
 }
 /* IPAD PRO 10.5" */
