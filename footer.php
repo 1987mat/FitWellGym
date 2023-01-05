@@ -1,6 +1,6 @@
   <footer>
     <div class="copyright">
-      <p class="copyright-text"> Copyright <span> &#169 </span> 2022 Fit&Well.</p>
+      <p class="copyright-text"> Copyright <span> &#169 </span> 2023 Fit&Well.</p>
     </div>
   </footer>
   <div class="search-overlay">
