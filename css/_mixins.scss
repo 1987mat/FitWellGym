@@ -64,6 +64,7 @@
 
 @mixin linkHover() {
   cursor: pointer;
+  text-decoration-color: #282828;
   opacity: 0.7;
 }
 

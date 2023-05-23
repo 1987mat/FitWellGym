@@ -69,8 +69,13 @@
         }
       }
     }
-
     .contact-wrapper {
+      .form-container {
+        .contact-form {
+          width: 80%;
+        }
+      }
+
       .map-wrapper {
         flex-direction: column;
       }
@@ -204,17 +209,6 @@
 
             li {
               list-style-type: none;
-
-              a {
-                font-size: 0.9rem;
-
-                &:hover {
-                  cursor: pointer;
-                  text-decoration: underline;
-                  text-underline-offset: 8px;
-                  text-decoration-thickness: 3px;
-                }
-              }
             }
           }
         }
@@ -276,6 +270,14 @@
           .single-event {
             gap: 2em;
           }
+        }
+      }
+    }
+
+    .contact-wrapper {
+      .form-container {
+        .contact-form {
+          width: 55%;
         }
       }
     }

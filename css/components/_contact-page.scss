@@ -32,17 +32,36 @@
       flex-direction: column;
       justify-content: center;
       gap: 0.5em;
-      width: 70%;
 
-      button {
-        margin: 0.5em;
+      .form-controls {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+
+        input,
+        textarea {
+          font-family: 'Lato', sans-serif;
+          border-radius: 5px;
+          margin-bottom: 1em;
+          padding: 1em;
+          border: 0;
+          width: 100%;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        textarea {
+          resize: none;
+        }
+      }
+
+      .submit-btn {
         padding: 1em;
         border-radius: 5px;
         border: none;
         font-weight: bold;
         height: 4em;
         background-color: gainsboro;
-        box-shadow: 0 0 5px gray;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         color: #282828;
         transition: background-color 0.2s ease-in;
 
@@ -53,19 +72,6 @@
         &:active {
           transform: translateY(-2px);
         }
-      }
-
-      input,
-      textarea {
-        font-family: 'Lato', sans-serif;
-        border-radius: 5px;
-        margin: 0.5em;
-        padding: 1em;
-        border: 0;
-      }
-
-      textarea {
-        resize: none;
       }
     }
   }

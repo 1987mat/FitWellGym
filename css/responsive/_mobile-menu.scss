@@ -61,7 +61,7 @@ header {
       z-index: 20;
       transform: translatex(-100%);
       opacity: 0;
-      transition: transform 250ms ease-in, opacity 250ms ease-in;
+      transition: transform 0.4s ease, opacity 0.4s ease;
 
       ul {
         padding: 7em 5em;

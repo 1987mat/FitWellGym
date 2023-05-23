@@ -7,11 +7,23 @@
   <div class="form-container">
     <h1>Get In Touch</h1>
     <form class="contact-form">
-      <input type="text" placeholder="First Name" required>
-      <input type="text" placeholder="Last Name" required>
-      <input type="email" placeholder="Email" required>
-      <textarea rows="8" maxlength="30" placeholder="Your comments here..." required></textarea>
-      <button class="submit-btn" type="submit">SUBMIT</button>
+      <div class="form-controls">
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" required>
+      </div>
+      <div class="form-controls">
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" required>
+      </div>
+     <div class="form-controls">
+       <label for="email">Email</label>
+       <input type="email" id="email" required>
+     </div>
+     <div class="form-controls">
+      <label for="message">Message</label>
+      <textarea id="message" rows="8" maxlength="30" required></textarea>
+     </div>
+     <input type="submit" class="submit-btn"></input>
     </form>
   </div>
   <!-- MAP -->

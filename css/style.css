@@ -44,6 +44,7 @@ html body a {
 }
 html body a:hover {
   cursor: pointer;
+  text-decoration-color: #282828;
   opacity: 0.7;
 }
 html body header {
@@ -66,7 +67,32 @@ html body header .container {
   display: flex;
   justify-content: space-evenly;
   align-content: stretch;
+}
+html body header .container .main-navigation ul {
   /* Highlight current page link */
+}
+html body header .container .main-navigation ul li a {
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 3px;
+  text-decoration-color: transparent;
+  -webkit-text-decoration-color: transparent;
+  -moz-text-decoration-color: transparent;
+  transition: text-decoration-color 0.4s ease;
+}
+html body header .container .main-navigation ul li a:hover {
+  cursor: pointer;
+  text-decoration-color: #282828;
+  -webkit-text-decoration-color: #282828;
+  -moz-text-decoration-color: #282828;
+}
+html body header .container .main-navigation ul .current-menu-item a {
+  text-shadow: 1px #ff0000;
+  color: #282828;
+  text-decoration-color: #282828;
+  -webkit-text-decoration-color: #282828;
+  -moz-text-decoration-color: #282828;
 }
 html body header .container .header-util {
   position: fixed;
@@ -79,21 +105,12 @@ html body header .container .header-util span {
   margin-right: 0.5em;
   opacity: 1;
   text-decoration: none;
-  transition: opacity 0.9s ease, -webkit-text-decoration 0.9s ease;
-  transition: opacity 0.9s ease, text-decoration 0.9s ease;
-  transition: opacity 0.9s ease, text-decoration 0.9s ease, -webkit-text-decoration 0.9s ease;
+  transition: opacity 0.9s ease;
 }
-html body header .container .header-util a a:hover,
-html body header .container .header-util span a:hover {
+html body header .container .header-util a:hover {
   cursor: pointer;
+  text-decoration-color: #282828;
   opacity: 0.7;
-}
-html body header .container .current-menu-item a {
-  text-shadow: 1px #ff0000;
-  color: gray;
-  text-decoration: underline;
-  text-underline-offset: 8px;
-  text-decoration-thickness: 3px;
 }
 html body header .logo {
   background-image: url("../images/gym-logo.png");
@@ -370,7 +387,6 @@ html body main .homepage-events .events-heading a {
   position: relative;
   top: 40%;
   width: 10em;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   text-align: center;
@@ -493,6 +509,7 @@ html body .page-container-about .link-list li {
 }
 html body .page-container-about .link-list li a:hover {
   cursor: pointer;
+  text-decoration-color: #282828;
   opacity: 0.7;
 }
 html body .page-container-about .about-container {
@@ -671,37 +688,42 @@ html body .contact-wrapper .form-container .contact-form {
   flex-direction: column;
   justify-content: center;
   gap: 0.5em;
-  width: 70%;
 }
-html body .contact-wrapper .form-container .contact-form button {
-  margin: 0.5em;
+html body .contact-wrapper .form-container .contact-form .form-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+html body .contact-wrapper .form-container .contact-form .form-controls input,
+html body .contact-wrapper .form-container .contact-form .form-controls textarea {
+  font-family: "Lato", sans-serif;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  padding: 1em;
+  border: 0;
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+html body .contact-wrapper .form-container .contact-form .form-controls textarea {
+  resize: none;
+}
+html body .contact-wrapper .form-container .contact-form .submit-btn {
   padding: 1em;
   border-radius: 5px;
   border: none;
   font-weight: bold;
   height: 4em;
   background-color: gainsboro;
-  box-shadow: 0 0 5px gray;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   color: #282828;
   transition: background-color 0.2s ease-in;
 }
-html body .contact-wrapper .form-container .contact-form button:hover {
+html body .contact-wrapper .form-container .contact-form .submit-btn:hover {
   cursor: pointer;
   background-color: #f0f8ff;
 }
-html body .contact-wrapper .form-container .contact-form button:active {
+html body .contact-wrapper .form-container .contact-form .submit-btn:active {
   transform: translateY(-2px);
-}
-html body .contact-wrapper .form-container .contact-form input,
-html body .contact-wrapper .form-container .contact-form textarea {
-  font-family: "Lato", sans-serif;
-  border-radius: 5px;
-  margin: 0.5em;
-  padding: 1em;
-  border: 0;
-}
-html body .contact-wrapper .form-container .contact-form textarea {
-  resize: none;
 }
 html body .contact-wrapper .title {
   font-size: 3rem;
@@ -789,6 +811,7 @@ html body .page-container .single-event .event-info a {
 }
 html body .page-container .single-event .event-info a:hover {
   cursor: pointer;
+  text-decoration-color: #282828;
   opacity: 0.7;
 }
 html body .page-container .single-post {
@@ -1263,14 +1286,10 @@ footer {
   font-size: 1.8rem;
   font-weight: 300;
   color: #000000;
-  outline: none;
+  outline-offset: 10px;
   padding-left: 1.2em;
 }
 .search-overlay .search-overlay-top .search-container .search-input::-moz-placeholder {
-  font-size: 1.8rem;
-  color: #000000;
-}
-.search-overlay .search-overlay-top .search-container .search-input:-ms-input-placeholder {
   font-size: 1.8rem;
   color: #000000;
 }
@@ -1301,11 +1320,6 @@ footer {
   overflow-y: scroll;
   /* LOADING SPINNER */
 }
-@-webkit-keyframes spinner {
-  to {
-    transform: rotate(360deg);
-  }
-}
 @keyframes spinner {
   to {
     transform: rotate(360deg);
@@ -1326,8 +1340,7 @@ footer {
   border: solid 4px #00008b;
   border-bottom-color: #f0f8ff;
   border-radius: 50%;
-  -webkit-animation: spinner 0.6s linear infinite;
-          animation: spinner 0.6s linear infinite;
+  animation: spinner 0.6s linear infinite;
 }
 .search-overlay .results-container .row {
   display: flex;
@@ -1403,6 +1416,7 @@ footer {
 @media (hover: hover) {
   a:hover {
     cursor: pointer;
+    text-decoration-color: #282828;
     opacity: 0.7;
   }
 }
@@ -1463,7 +1477,7 @@ footer {
     z-index: 20;
     transform: translatex(-100%);
     opacity: 0;
-    transition: transform 250ms ease-in, opacity 250ms ease-in;
+    transition: transform 0.4s ease, opacity 0.4s ease;
   }
   html header .container .main-navigation ul {
     padding: 7em 5em;
@@ -1519,6 +1533,9 @@ footer {
   }
   html .page-container .link-list li a .related-post-container .text-overlay {
     opacity: 1;
+  }
+  html .contact-wrapper .form-container .contact-form {
+    width: 80%;
   }
   html .contact-wrapper .map-wrapper {
     flex-direction: column;
@@ -1610,15 +1627,6 @@ footer {
   html header .container .main-navigation ul li {
     list-style-type: none;
   }
-  html header .container .main-navigation ul li a {
-    font-size: 0.9rem;
-  }
-  html header .container .main-navigation ul li a:hover {
-    cursor: pointer;
-    text-decoration: underline;
-    text-underline-offset: 8px;
-    text-decoration-thickness: 3px;
-  }
   html main .history-section .our-history {
     flex-direction: row;
   }
@@ -1648,6 +1656,9 @@ footer {
   }
   html .search-overlay .results-container .row .single-event {
     gap: 2em;
+  }
+  html .contact-wrapper .form-container .contact-form {
+    width: 55%;
   }
 }
 /* IPAD PRO 10.5" LANDSCAPE */
