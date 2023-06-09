@@ -106,11 +106,6 @@
         .main-navigation {
           ul {
             padding-top: 9em;
-            gap: 6.5em;
-
-            li {
-              font-size: 1.8rem;
-            }
           }
         }
       }
@@ -137,22 +132,7 @@
 
         .main-navigation {
           ul {
-            gap: 7em;
-          }
-        }
-      }
-    }
-  }
-}
-
-/* IPAD PRO 10.5" */
-@media screen and (min-width: 834px) and (orientation: portrait) {
-  html {
-    header {
-      .container {
-        .main-navigation {
-          ul {
-            gap: 7.5em;
+            gap: 5em;
           }
         }
       }
@@ -175,7 +155,7 @@
         .logo {
           position: relative;
           top: 12px;
-          right: 65px;
+          right: 80px;
         }
 
         #search-icon {
@@ -204,11 +184,15 @@
           ul {
             display: flex;
             flex-direction: row;
-            padding: 0;
+            padding: 1em;
             gap: 3em;
 
             li {
               list-style-type: none;
+
+              a {
+                font-size: 1rem;
+              }
             }
           }
         }
@@ -306,11 +290,11 @@
       .container {
         .logo {
           top: 13px;
-          right: 80px;
+          right: 60px;
         }
 
         #search-icon {
-          top: 30px;
+          top: 32px;
           left: -60px;
         }
 

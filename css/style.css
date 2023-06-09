@@ -11,6 +11,7 @@
 * {
   box-sizing: border-box;
   color: #282828;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -72,7 +73,6 @@ html body header .container .main-navigation ul {
   /* Highlight current page link */
 }
 html body header .container .main-navigation ul li a {
-  font-size: 0.9rem;
   text-decoration: underline;
   text-underline-offset: 8px;
   text-decoration-thickness: 3px;
@@ -1484,13 +1484,14 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 5em;
+    gap: 4em;
   }
   html header .container .main-navigation ul li {
-    font-size: 1.5rem;
     list-style-type: none;
     text-align: center;
-    font-weight: bold;
+  }
+  html header .container .main-navigation ul li a {
+    font-size: 3rem;
   }
   html header .container .main-navigation.show {
     transform: translatex(0);
@@ -1554,10 +1555,6 @@ footer {
   }
   html header .container .main-navigation ul {
     padding-top: 9em;
-    gap: 6.5em;
-  }
-  html header .container .main-navigation ul li {
-    font-size: 1.8rem;
   }
 }
 /* TABLET */
@@ -1574,13 +1571,7 @@ footer {
     font-size: 2.2rem;
   }
   html header .container .main-navigation ul {
-    gap: 7em;
-  }
-}
-/* IPAD PRO 10.5" */
-@media screen and (min-width: 834px) and (orientation: portrait) {
-  html header .container .main-navigation ul {
-    gap: 7.5em;
+    gap: 5em;
   }
 }
 /* DESKTOP & TABLET LANDSCAPE */
@@ -1595,7 +1586,7 @@ footer {
   html header .container .logo {
     position: relative;
     top: 12px;
-    right: 65px;
+    right: 80px;
   }
   html header .container #search-icon {
     position: relative;
@@ -1621,11 +1612,14 @@ footer {
   html header .container .main-navigation ul {
     display: flex;
     flex-direction: row;
-    padding: 0;
+    padding: 1em;
     gap: 3em;
   }
   html header .container .main-navigation ul li {
     list-style-type: none;
+  }
+  html header .container .main-navigation ul li a {
+    font-size: 1rem;
   }
   html main .history-section .our-history {
     flex-direction: row;
@@ -1674,10 +1668,10 @@ footer {
   }
   html header .container .logo {
     top: 13px;
-    right: 80px;
+    right: 60px;
   }
   html header .container #search-icon {
-    top: 30px;
+    top: 32px;
     left: -60px;
   }
   html header .container .main-navigation {
