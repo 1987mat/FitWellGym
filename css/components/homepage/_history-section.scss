@@ -8,11 +8,13 @@
   h2 {
     font-size: 2.5rem;
     transform: translateY(100px);
-    transition: transform 0.9s ease;
+    opacity: 0;
+    transition: transform 0.9s ease, opacity 0.9s ease;
     margin-bottom: 1em;
 
     &.active {
       transform: translateY(0);
+      opacity: 1;
     }
   }
 
@@ -23,7 +25,8 @@
     margin: 5em;
     gap: 4em;
     transform: translateY(100px);
-    transition: transform 0.9s ease;
+    opacity: 0;
+    transition: transform 0.9s ease, opacity 0.9s ease;
 
     img {
       max-width: 80%;
@@ -53,6 +56,7 @@
 
     &.active {
       transform: translateY(0);
+      opacity: 1;
     }
   }
 }

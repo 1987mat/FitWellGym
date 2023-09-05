@@ -16,19 +16,20 @@
     width: 80%;
     gap: 3em;
     transform: translateY(100px);
-    transition: transform 0.9s ease;
+    opacity: 0;
+    transition: transform 0.9s ease, opacity 0.9s ease;
 
     h1 {
       font-size: 3.5rem;
       color: rgb(250, 244, 244);
       text-align: center;
-      line-height: 1.2;
       width: 100%;
+      text-shadow: 1px 1px 1px whitesmoke;
     }
 
     h2 {
       color: rgb(250, 244, 244);
-      margin-top: -1em;
+      margin-top: -2em;
       font-style: italic;
     }
 
@@ -40,9 +41,11 @@
       padding: 1.2em;
       text-align: center;
       width: 12em;
+      font-size: 1rem;
       box-shadow: 0 0 8px #282828;
       font-weight: bold;
       text-decoration: none;
+      letter-spacing: 1px;
       transition: background-color 0.9s ease;
 
       &:hover {
@@ -53,6 +56,7 @@
 
     &.active {
       transform: translateY(0);
+      opacity: 1;
     }
   }
 }

@@ -10,10 +10,12 @@
   h2 {
     font-size: 2.5rem;
     transform: translateY(100px);
-    transition: transform 0.9s ease;
+    opacity: 0;
+    transition: transform 0.9s ease, opacity 0.9s ease;
 
     &.active {
       transform: translateY(0);
+      opacity: 1;
     }
   }
 
@@ -28,7 +30,8 @@
     height: 30em;
     border-radius: 5px;
     transform: translateY(100px);
-    transition: transform 0.9s ease;
+    opacity: 0;
+    transition: transform 0.9s ease, opacity 0.9s ease;
 
     a {
       background-color: #778899;
@@ -52,6 +55,7 @@
 
     &.active {
       transform: translateY(0);
+      opacity: 1;
     }
   }
 }

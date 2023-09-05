@@ -4,8 +4,8 @@ header {
       width: 2em;
       height: 2em;
       position: fixed;
-      left: 8px;
-      top: 12px;
+      left: 1em;
+      top: 1.5em;
       z-index: 200;
       display: flex;
       flex-direction: column;
@@ -20,6 +20,7 @@ header {
         border-radius: 2px;
         width: 25px;
         height: 5px;
+        transition: transform 0.6s ease;
       }
 
       .bar-1 {
@@ -40,17 +41,17 @@ header {
         }
 
         .bar-2 {
-          opacity: 0;
+          transform: translateX(-200%);
         }
       }
     }
 
     #search-icon {
       position: fixed;
-      left: 45px;
-      top: 6.5px;
-      font-size: 3rem;
+      left: 1.8em;
+      top: 0.45em;
       z-index: 10;
+      font-size: 2.25rem;
     }
 
     .main-navigation {
@@ -59,16 +60,19 @@ header {
       min-height: 100vh;
       position: fixed;
       z-index: 20;
-      transform: translatex(-100%);
+      transform: translateX(-200%);
       opacity: 0;
       transition: transform 0.4s ease, opacity 0.4s ease;
 
       ul {
-        padding: 7em 5em;
+        padding: 5em;
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 4em;
+        opacity: 0;
+        transform: translateY(10%);
+        transition: transform 1.5s ease, opacity 1.5s ease;
 
         li {
           list-style-type: none;
@@ -81,14 +85,24 @@ header {
       }
 
       &.show {
-        transform: translatex(0);
+        transform: translateX(0);
         opacity: 1;
+
+        ul {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     }
 
     .logo {
-      top: 5px;
+      top: 0.5em;
       position: fixed;
+    }
+
+    .header-util {
+      right: 0;
+      top: 0.8em;
     }
   }
 }

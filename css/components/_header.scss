@@ -24,6 +24,7 @@ header {
       ul {
         li {
           a {
+            color: #484848;
             text-decoration: underline;
             text-underline-offset: 8px;
             text-decoration-thickness: 3px;
@@ -34,9 +35,9 @@ header {
 
             &:hover {
               cursor: pointer;
-              text-decoration-color: #282828;
-              -webkit-text-decoration-color: #282828;
-              -moz-text-decoration-color: #282828;
+              text-decoration-color: #484848;
+              -webkit-text-decoration-color: #484848;
+              -moz-text-decoration-color: #484848;
             }
           }
         }
@@ -44,6 +45,7 @@ header {
         /* Highlight current page link */
         .current-menu-item {
           a {
+            font-weight: bold;
             text-shadow: 1px #ff0000;
             color: #282828;
             text-decoration-color: #282828;
@@ -55,21 +57,21 @@ header {
     }
 
     .header-util {
-      position: fixed;
-      right: 0;
+      position: absolute;
       padding: 1em 0.5em;
 
       a,
       span {
-        font-size: 0.5rem;
+        font-size: 0.8rem;
         margin-right: 0.5em;
         opacity: 1;
         text-decoration: none;
-        transition: opacity 0.9s ease;
+        color: gray;
+        transition: color 0.4s ease;
       }
 
       a:hover {
-        @include linkHover();
+        color: #282828;
       }
     }
   }

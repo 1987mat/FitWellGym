@@ -6,10 +6,12 @@
     font-size: 2.5rem;
     margin-bottom: 3em;
     transform: translateY(100px);
-    transition: transform 0.9s ease;
+    opacity: 0;
+    transition: transform 0.9s ease, opacity 0.9s ease;
 
     &.active {
       transform: translateY(0);
+      opacity: 1;
     }
   }
 
@@ -99,6 +101,7 @@
 
     &.active {
       transform: translateY(0);
+      opacity: 1;
     }
   }
 }

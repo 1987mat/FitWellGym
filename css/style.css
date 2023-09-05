@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 /* Override Wordpress official styles for login page */
 .login h1 a {
   background-image: none;
@@ -10,8 +11,9 @@
 
 * {
   box-sizing: border-box;
-  color: #282828;
+  color: #484848;
   -webkit-tap-highlight-color: transparent;
+  font-family: "Inter", sans-serif;
 }
 
 html {
@@ -20,7 +22,6 @@ html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  font-family: "Lato", sans-serif;
 }
 html.no-scroll {
   overflow: hidden;
@@ -73,6 +74,7 @@ html body header .container .main-navigation ul {
   /* Highlight current page link */
 }
 html body header .container .main-navigation ul li a {
+  color: #484848;
   text-decoration: underline;
   text-underline-offset: 8px;
   text-decoration-thickness: 3px;
@@ -83,11 +85,12 @@ html body header .container .main-navigation ul li a {
 }
 html body header .container .main-navigation ul li a:hover {
   cursor: pointer;
-  text-decoration-color: #282828;
-  -webkit-text-decoration-color: #282828;
-  -moz-text-decoration-color: #282828;
+  text-decoration-color: #484848;
+  -webkit-text-decoration-color: #484848;
+  -moz-text-decoration-color: #484848;
 }
 html body header .container .main-navigation ul .current-menu-item a {
+  font-weight: bold;
   text-shadow: 1px #ff0000;
   color: #282828;
   text-decoration-color: #282828;
@@ -95,22 +98,20 @@ html body header .container .main-navigation ul .current-menu-item a {
   -moz-text-decoration-color: #282828;
 }
 html body header .container .header-util {
-  position: fixed;
-  right: 0;
+  position: absolute;
   padding: 1em 0.5em;
 }
 html body header .container .header-util a,
 html body header .container .header-util span {
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   margin-right: 0.5em;
   opacity: 1;
   text-decoration: none;
-  transition: opacity 0.9s ease;
+  color: gray;
+  transition: color 0.4s ease;
 }
 html body header .container .header-util a:hover {
-  cursor: pointer;
-  text-decoration-color: #282828;
-  opacity: 0.7;
+  color: #282828;
 }
 html body header .logo {
   background-image: url("../images/gym-logo.png");
@@ -146,18 +147,19 @@ html body main .heading-section .heading {
   width: 80%;
   gap: 3em;
   transform: translateY(100px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
 html body main .heading-section .heading h1 {
   font-size: 3.5rem;
   color: rgb(250, 244, 244);
   text-align: center;
-  line-height: 1.2;
   width: 100%;
+  text-shadow: 1px 1px 1px whitesmoke;
 }
 html body main .heading-section .heading h2 {
   color: rgb(250, 244, 244);
-  margin-top: -1em;
+  margin-top: -2em;
   font-style: italic;
 }
 html body main .heading-section .heading .hero-btn {
@@ -168,9 +170,11 @@ html body main .heading-section .heading .hero-btn {
   padding: 1.2em;
   text-align: center;
   width: 12em;
+  font-size: 1rem;
   box-shadow: 0 0 8px #282828;
   font-weight: bold;
   text-decoration: none;
+  letter-spacing: 1px;
   transition: background-color 0.9s ease;
 }
 html body main .heading-section .heading .hero-btn:hover {
@@ -179,6 +183,7 @@ html body main .heading-section .heading .hero-btn:hover {
 }
 html body main .heading-section .heading.active {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main .history-section {
   display: flex;
@@ -190,11 +195,13 @@ html body main .history-section {
 html body main .history-section h2 {
   font-size: 2.5rem;
   transform: translateY(100px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
   margin-bottom: 1em;
 }
 html body main .history-section h2.active {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main .history-section .our-history {
   text-align: center;
@@ -203,7 +210,8 @@ html body main .history-section .our-history {
   margin: 5em;
   gap: 4em;
   transform: translateY(100px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
 html body main .history-section .our-history img {
   max-width: 80%;
@@ -229,6 +237,7 @@ html body main .history-section .our-history .text-content p a {
 }
 html body main .history-section .our-history.active {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main .homepage-classes {
   text-align: center;
@@ -238,10 +247,12 @@ html body main .homepage-classes h2 {
   font-size: 2.5rem;
   margin-bottom: 3em;
   transform: translateY(100px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
 html body main .homepage-classes h2.active {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main .homepage-classes .classes-container {
   display: flex;
@@ -320,6 +331,7 @@ html body main .homepage-classes .classes-container .cycling:hover {
 }
 html body main .homepage-classes .classes-container.active {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main .homepage-workouts {
   display: flex;
@@ -333,10 +345,12 @@ html body main .homepage-workouts {
 html body main .homepage-workouts h2 {
   font-size: 2.5rem;
   transform: translateY(100px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
 html body main .homepage-workouts h2.active {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main .homepage-workouts .workout-heading {
   display: flex;
@@ -349,7 +363,8 @@ html body main .homepage-workouts .workout-heading {
   height: 30em;
   border-radius: 5px;
   transform: translateY(100px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
 html body main .homepage-workouts .workout-heading a {
   background-color: #778899;
@@ -371,6 +386,7 @@ html body main .homepage-workouts .workout-heading a:hover {
 }
 html body main .homepage-workouts .workout-heading.active {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main .homepage-events .events-heading {
   display: flex;
@@ -381,7 +397,8 @@ html body main .homepage-events .events-heading {
   height: 40em;
   width: 100vw;
   transform: translateY(100px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
 html body main .homepage-events .events-heading a {
   position: relative;
@@ -407,6 +424,7 @@ html body main .homepage-events .events-heading a:hover {
 }
 html body main .homepage-events .events-heading.active {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main .homepage-feeds {
   margin-top: 5em;
@@ -421,15 +439,18 @@ html body main .homepage-feeds h2 {
   font-size: 2.5rem;
   text-align: center;
   transform: translateY(100px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
 html body main .homepage-feeds h2.active {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main .homepage-feeds .social-media-container {
   margin-bottom: 4em;
   transform: translateY(100px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
 html body main .homepage-feeds .social-media-container i {
   margin: 0.5em;
@@ -469,6 +490,7 @@ html body main .homepage-feeds .feed-container img {
 }
 html body main .homepage-feeds .feed-container.active {
   transform: translateY(0);
+  opacity: 1;
 }
 html body .blog-section h1 {
   font-size: 3rem;
@@ -694,6 +716,9 @@ html body .contact-wrapper .form-container .contact-form .form-controls {
   flex-direction: column;
   gap: 0.5em;
 }
+html body .contact-wrapper .form-container .contact-form .form-controls label {
+  color: gray;
+}
 html body .contact-wrapper .form-container .contact-form .form-controls input,
 html body .contact-wrapper .form-container .contact-form .form-controls textarea {
   font-family: "Lato", sans-serif;
@@ -710,17 +735,18 @@ html body .contact-wrapper .form-container .contact-form .form-controls textarea
 html body .contact-wrapper .form-container .contact-form .submit-btn {
   padding: 1em;
   border-radius: 5px;
+  font-size: 1rem;
   border: none;
   font-weight: bold;
-  height: 4em;
-  background-color: gainsboro;
+  opacity: 1;
+  background-color: lightblue;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  color: #282828;
-  transition: background-color 0.2s ease-in;
+  color: white;
+  transition: opacity 0.2s ease-in;
 }
 html body .contact-wrapper .form-container .contact-form .submit-btn:hover {
   cursor: pointer;
-  background-color: #f0f8ff;
+  opacity: 0.9;
 }
 html body .contact-wrapper .form-container .contact-form .submit-btn:active {
   transform: translateY(-2px);
@@ -1425,14 +1451,14 @@ footer {
   html {
     min-height: 100%;
     min-width: 100%;
-    font-size: 50%;
+    font-size: 70%;
   }
   html header .container .hamburger {
     width: 2em;
     height: 2em;
     position: fixed;
-    left: 8px;
-    top: 12px;
+    left: 1em;
+    top: 1.5em;
     z-index: 200;
     display: flex;
     flex-direction: column;
@@ -1446,6 +1472,7 @@ footer {
     border-radius: 2px;
     width: 25px;
     height: 5px;
+    transition: transform 0.6s ease;
   }
   html header .container .hamburger .bar-1 {
     transform: translateY(-4px);
@@ -1460,14 +1487,14 @@ footer {
     transform: translateY(-6px) rotate(45deg);
   }
   html header .container .hamburger.clicked .bar-2 {
-    opacity: 0;
+    transform: translateX(-200%);
   }
   html header .container #search-icon {
     position: fixed;
-    left: 45px;
-    top: 6.5px;
-    font-size: 3rem;
+    left: 1.8em;
+    top: 0.45em;
     z-index: 10;
+    font-size: 2.25rem;
   }
   html header .container .main-navigation {
     background: #ffffff;
@@ -1475,16 +1502,19 @@ footer {
     min-height: 100vh;
     position: fixed;
     z-index: 20;
-    transform: translatex(-100%);
+    transform: translateX(-200%);
     opacity: 0;
     transition: transform 0.4s ease, opacity 0.4s ease;
   }
   html header .container .main-navigation ul {
-    padding: 7em 5em;
+    padding: 5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 4em;
+    opacity: 0;
+    transform: translateY(10%);
+    transition: transform 1.5s ease, opacity 1.5s ease;
   }
   html header .container .main-navigation ul li {
     list-style-type: none;
@@ -1494,12 +1524,26 @@ footer {
     font-size: 3rem;
   }
   html header .container .main-navigation.show {
-    transform: translatex(0);
+    transform: translateX(0);
     opacity: 1;
   }
+  html header .container .main-navigation.show ul {
+    opacity: 1;
+    transform: translateY(0);
+  }
   html header .container .logo {
-    top: 5px;
+    top: 0.5em;
     position: fixed;
+  }
+  html header .container .header-util {
+    right: 0;
+    top: 0.8em;
+  }
+  html main .heading-section .heading h1 {
+    line-height: 150%;
+  }
+  html main .heading-section .hero-btn {
+    font-size: 1.25rem;
   }
   html main .history-section .our-history {
     flex-direction: column;
@@ -1549,31 +1593,6 @@ footer {
     margin: 0 auto;
   }
 }
-@media screen and (min-width: 374px) {
-  html {
-    font-size: 55%;
-  }
-  html header .container .main-navigation ul {
-    padding-top: 9em;
-  }
-}
-/* TABLET */
-@media screen and (min-width: 768px) and (orientation: portrait) {
-  html {
-    font-size: 85%;
-  }
-  html header .container .hamburger {
-    top: 15px;
-  }
-  html header .container #search-icon {
-    top: 7.5px;
-    left: 50px;
-    font-size: 2.2rem;
-  }
-  html header .container .main-navigation ul {
-    gap: 5em;
-  }
-}
 /* DESKTOP & TABLET LANDSCAPE */
 @media screen and (min-width: 992px) {
   html {
@@ -1585,14 +1604,14 @@ footer {
   }
   html header .container .logo {
     position: relative;
-    top: 12px;
-    right: 80px;
+    right: 3.5em;
+    top: 0.8em;
   }
   html header .container #search-icon {
-    position: relative;
     font-size: 1rem;
-    top: 27px;
-    left: -60px;
+    position: relative;
+    top: 2em;
+    left: -6em;
     transition: transform 0.2s ease-in;
   }
   html header .container #search-icon:hover {
@@ -1603,7 +1622,7 @@ footer {
     width: auto;
     min-height: 4em;
     top: 0;
-    left: -40px;
+    left: -4em;
     visibility: visible;
     opacity: 1;
     transform: initial;
@@ -1613,13 +1632,18 @@ footer {
     display: flex;
     flex-direction: row;
     padding: 1em;
-    gap: 3em;
+    gap: 2.5em;
+    opacity: 1;
+    transform: translateX(0);
   }
   html header .container .main-navigation ul li {
     list-style-type: none;
   }
   html header .container .main-navigation ul li a {
     font-size: 1rem;
+  }
+  html header .header-util {
+    top: 2em;
   }
   html main .history-section .our-history {
     flex-direction: row;
@@ -1655,67 +1679,20 @@ footer {
     width: 55%;
   }
 }
-/* IPAD PRO 10.5" LANDSCAPE */
-@media screen and (min-width: 1112px) {
-  html header .container #search-icon {
-    left: -80px;
-  }
-}
 /* LARGE SCREENS */
 @media screen and (min-width: 1200px) {
   html {
     font-size: 100%;
   }
-  html header .container .logo {
-    top: 13px;
-    right: 60px;
-  }
   html header .container #search-icon {
-    top: 32px;
-    left: -60px;
-  }
-  html header .container .main-navigation {
-    right: 30px;
+    left: -7em;
   }
   html header .container .main-navigation ul {
-    gap: 4em;
+    gap: 3em;
   }
   html .posts-container .classes-container {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-  }
-}
-@media screen and (min-width: 1920px) {
-  header .container #search-icon {
-    left: -70px;
-  }
-  header .container .main-navigation ul li {
-    margin-right: 2em;
-  }
-}
-@media screen and (min-width: 2074px) {
-  html header .container .logo {
-    top: 12px;
-    right: 125px;
-  }
-  html header .container #search-icon {
-    left: -170px;
-  }
-  html header .container .main-navigation ul {
-    gap: 4em;
-  }
-}
-@media screen and (min-width: 2559px) {
-  html {
-    font-size: 150%;
-  }
-  html header .container .logo {
-    top: 16px;
-    right: 110px;
-  }
-  html header .container #search-icon {
-    top: 42px;
-    left: -120px;
   }
 }/*# sourceMappingURL=style.css.map */

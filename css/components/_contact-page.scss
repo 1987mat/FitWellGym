@@ -38,6 +38,10 @@
         flex-direction: column;
         gap: 0.5em;
 
+        label {
+          color: gray;
+        }
+
         input,
         textarea {
           font-family: 'Lato', sans-serif;
@@ -57,16 +61,18 @@
       .submit-btn {
         padding: 1em;
         border-radius: 5px;
+        font-size: 1rem;
         border: none;
         font-weight: bold;
-        height: 4em;
-        background-color: gainsboro;
+        opacity: 1;
+        background-color: lightblue;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        color: #282828;
-        transition: background-color 0.2s ease-in;
+        color: white;
+        transition: opacity 0.2s ease-in;
 
         &:hover {
-          @include buttonHover();
+          cursor: pointer;
+          opacity: 0.9;
         }
 
         &:active {

@@ -8,7 +8,7 @@
     <div class="heading" data-observe>
         <h1>Helping you reach your fitness goals.</h1>
         <h2>Ready to get in shape?</h2>
-        <a href="#classes" class="hero-btn" aria-label="classes">CLASSES</a>    
+        <a href="#classes" class="hero-btn" aria-label="classes">JOIN US</a>    
     </div>
   </section>
 
