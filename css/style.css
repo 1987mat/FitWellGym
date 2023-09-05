@@ -1521,7 +1521,7 @@ footer {
     text-align: center;
   }
   html header .container .main-navigation ul li a {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   html header .container .main-navigation.show {
     transform: translateX(0);
