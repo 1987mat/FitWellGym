@@ -6,7 +6,7 @@
 <main class="main-body-content">
   <section class="heading-section">
     <div class="heading" data-observe>
-        <h1>Helping you reach your fitness goals.</h1>
+        <h1>Helping you reach your fitness goals</h1>
         <h2>Ready to get in shape?</h2>
         <a href="#classes" class="hero-btn" aria-label="classes">JOIN US</a>    
     </div>
